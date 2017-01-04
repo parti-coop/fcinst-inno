@@ -17,6 +17,10 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 gem 'bootswatch-rails'
 gem 'haml-rails', '~> 0.9.0'
 
+# notification
+gem 'slack-notifier', '~> 1.4'
+gem 'exception_notification', '~> 4.1', '>= 4.1.4'
+
 #util
 gem 'envyable', '~> 0.2.0'
 gem 'ruby_dig', '~> 0.0.2'
