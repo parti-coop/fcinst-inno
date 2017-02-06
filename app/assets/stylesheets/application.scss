@@ -708,3 +708,14 @@ h3{
 }
  }
 
+#application-header {
+  a {
+    &:hover {
+      color: #fff;
+    }
+    &.active {
+      color: #fff;
+    }
+  }
+}
+
