@@ -24,9 +24,8 @@
             대선 정책으로 제안합니다.
             %br/
           %p
-            %a.ltc-safety-orange-blaze-orange{:href => "소개.html"}
+            = link_to about_path, class: 'ltc-safety-orange-blaze-orange' do
               %u 더 자세한 내용 보기
-            %br/
         .col-sm-6
           %p
             소개를 적습니다.
@@ -105,11 +104,8 @@
             %br
 
             %br
-            %a.ltc-safety-orange-blaze-orange{:href => "인사이트.html"}
+            = link_to insights_path, class: 'ltc-safety-orange-blaze-orange' do
               %u 인사이트에 의견 남기기
-
-            %br
-            %br
   / bloc-2 END
   / ScrollToTop Button
   %a.bloc-button.btn.btn-d.scrollToTop{:onclick => "scrollToTarget('1')"}

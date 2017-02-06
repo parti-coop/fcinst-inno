@@ -201,6 +201,18 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   line-height: 28px;
 }
 
+#bloc-9 #application-header {
+  a {
+    color: black;
+    &:hover {
+      color: #fff;
+    }
+    &.active {
+      color: #fff;
+    }
+  }
+}
+
 /* = NavBar
 -------------------------------------------------------------- */
 
@@ -517,7 +529,7 @@ h3{
   background-image: asset_url('gradation_background.png');
 }
 .bg-interview-landit{
-  background-image: asset_url('interview_landit.jpg');
+  background-image: asset_url('interview_landit.png');
 }
 
 
