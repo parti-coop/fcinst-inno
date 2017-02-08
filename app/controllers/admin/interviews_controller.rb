@@ -6,17 +6,12 @@ module Admin
 
     def show
       @interview = Interview.find(params[:id])
-      if @interview.proposals.present?
-        @proposals = @interview.proposals
-      end
-
-      while @interview.proposals.size < 2
-        @interview.proposals.build
-      end
+      get_or_build_proposals
     end
 
     def new
       @interview = Interview.new
+      get_or_build_proposals
     end
 
     def create
@@ -54,6 +49,17 @@ module Admin
 
     def interview_params
       params.require(:interview).permit(:name, :organization, :image, :image_thumbnail, :message, :video_url, :introduction, :summary)
+    end
+
+    def get_or_build_proposals
+      if @interview.proposals.present?
+        @proposals = @interview.proposals
+      end
+
+      while @interview.proposals.size < 2
+        @interview.proposals.build
+        @proposals = @interview.proposals
+      end
     end
   end
 end
