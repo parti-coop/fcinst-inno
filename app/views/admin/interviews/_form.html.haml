@@ -1,0 +1,35 @@
+= form_for [:admin, @interview] do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :organization
+    = f.text_field :organization, class: 'form-control'
+  .form-group
+    = f.label :introduction
+    ~ f.text_area :introduction, class: 'form-control'
+  .form-group
+    = f.label :image
+    = f.hidden_field :image_cache, value: f.object.image_cache
+    = f.file_field :image, class: 'form-control'
+    - if upload_file_exists?(f.object.image)
+      = image_tag f.object.image.xs.url
+  .form-group
+    = f.label :image_thumbnail
+    = f.hidden_field :image_cache, value: f.object.image_cache
+    = f.file_field :image_thumbnail, class: 'form-control'
+    - if upload_file_exists?(f.object.image_thumbnail)
+      = image_tag f.object.image_thumbnail.xs.url
+  .form-group
+    = f.label :message
+    ~ f.text_area :message, class: 'form-control'
+  .form-group
+    = f.label :summary
+    ~ f.text_area :summary, class: 'form-control'
+  .form-group
+    = f.label :video_url
+    = f.text_field :video_url, class: 'form-control'
+
+  = f.submit '저장', data: { disable_with: "진행 중..." }, class: 'btn btn-sm btn-primary'
+  - if @interview.persisted?
+    = link_to '삭제', [:admin, @interview], method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: "정말 삭제하시겠습니까?" }

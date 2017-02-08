@@ -1,1 +1,13 @@
-인터뷰목록
+= render 'admin/base/header'
+.container
+  %h1.page-header #{Interview.model_name.human} 관리
+  %p
+    = link_to '인터뷰만들기', new_admin_interview_path, class: 'btn btn-primary'
+  %hr
+  - if @interviews.any?
+    %ul
+      - @interviews.each do |interview|
+        %li
+          = link_to admin_interview_path(interview) do
+            = interview.name
+

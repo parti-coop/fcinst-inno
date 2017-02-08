@@ -1,0 +1,7 @@
+= render 'admin/base/header'
+
+.container
+  %h1.page-header 관리
+  %ul.list-group
+    %li= link_to '인터뷰 관리', admin_interviews_path, class: 'btn btn-primary'
+    %li= link_to '인사이트 관리', admin_insights_path, class: 'btn btn-primary'

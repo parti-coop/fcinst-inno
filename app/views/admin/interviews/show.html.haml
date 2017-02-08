@@ -1,0 +1,7 @@
+= render 'admin/base/header'
+
+%section
+  .container
+    %section.poll
+      %h3.page-header #{Interview.model_name.human} 관리
+      = render 'admin/interviews/form'

@@ -10,16 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105052859) do
+ActiveRecord::Schema.define(version: 20170208105846) do
 
   create_table "interviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
-    t.string   "name",                       null: false
+    t.string   "name",                          null: false
     t.string   "organization"
     t.string   "image"
-    t.text     "message",      limit: 65535
-    t.string   "video_url",                  null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.text     "message",         limit: 65535
+    t.string   "video_url",                     null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.text     "introduction",    limit: 65535
+    t.text     "summary",         limit: 65535
+    t.string   "image_thumbnail"
   end
 
 end

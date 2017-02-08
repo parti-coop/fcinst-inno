@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :insights
 
   namespace :admin do
+    root 'base#home'
     resources :interviews
+    resources :insights
   end
 end

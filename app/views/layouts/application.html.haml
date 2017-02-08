@@ -23,6 +23,7 @@
         .unobtrusive-flash-container
     .page-container
       = yield
-    = render 'application/footer'
+    - unless params[:controller].include? 'admin'
+      = render 'application/footer'
     = javascript_include_tag 'application'
     = yield :script if content_for?(:script)
