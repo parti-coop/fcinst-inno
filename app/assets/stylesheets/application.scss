@@ -228,7 +228,23 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
   }
 }
-
+#bloc-16 {
+  padding: 20px 0 36px;
+  h3 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .interview-header {
+    padding-top: 30px;
+  }
+}
+#bloc-16 p{
+  font-size: 30px;
+  line-height: 42px;
+}
+#bloc-17 h3{
+  line-height: 28px;
+}
 #bloc-19 h2{
   font-family: 'Open Sans';
   font-weight: 600;
@@ -541,6 +557,9 @@ h3{
 }
 .bgc-blue-pigment{
   background-color:#3023AE;
+}
+.bgc-onyx-2{
+  background-color:#070020;
 }
 /* Text colour styles */
 
