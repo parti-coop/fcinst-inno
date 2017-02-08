@@ -6,6 +6,13 @@ module Admin
 
     def show
       @interview = Interview.find(params[:id])
+      if @interview.proposals.present?
+        @proposals = @interview.proposals
+      end
+
+      while @interview.proposals.size < 2
+        @interview.proposals.build
+      end
     end
 
     def new

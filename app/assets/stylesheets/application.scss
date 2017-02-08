@@ -256,6 +256,19 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   img {
     width: 100%;
   }
+  .interview-proposals {
+    &--header {
+      margin-bottom: 0;
+    }
+    &--contents {
+      color: #FF7000;
+    }
+    .interview-proposal {
+      &:after {
+        content: '>'
+      }
+    }
+  }
 }
 #bloc-19 h2{
   font-family: 'Open Sans';
@@ -272,6 +285,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 #bloc-19 h3{
   font-size: 18px;
   line-height: 28px;
+}
+#bloc-36 a {
+  color: #fff;
 }
 
 /* = NavBar

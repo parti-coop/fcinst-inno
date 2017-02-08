@@ -41,15 +41,15 @@
             = simple_format @interview.message if @interview.message.present?
   / bloc-10 END
   / bloc-11
-  #bloc-11.bloc.bgc-onyx.d-bloc
-    .container.bloc-lg
-      .row
-        .col-sm-6
-          = image_tag "placard_test.png", class: 'img-responsive'
-          = image_tag "agree_disagree.png", class: 'img-responsive hidden-xs hidden-sm'
-        .col-sm-6
-          = image_tag "placard_test.png", class: 'img-responsive'
-          = image_tag "agree_disagree.png", class: 'img-responsive'
+  - if @interview.proposals.any?
+    %a{class: 'anchor', id: 'anchor-proposals'}
+    #bloc-11.bloc.bgc-onyx.d-bloc
+      .container.bloc-lg
+        .row
+          - @interview.proposals.each do |proposal|
+            .col-sm-6
+              = image_tag proposal.image.md.url, class: 'img-responsive', width: '100%'
+              = image_tag 'agree_disagree.png', class: 'img-responsive'
   / bloc-11 END
   / bloc-12
   #bloc-12.bloc.bgc-white.l-bloc

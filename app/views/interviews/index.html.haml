@@ -36,28 +36,32 @@
                     %span.fa.fa-instagram.icon-md
   / bloc-16 END
   / bloc-17
-  #bloc-17.bloc.tc-white.bgc-onyx-2
-    .container.bloc-lg
-      / - abort @interviews.inspect
-      - @interviews.each_slice(3) do |interviews_slices|
-        .row
-          - interviews_slices.each do |interview|
-            = link_to interview_path(interview) do
-              .col-sm-4
-                = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
-                %h3.mg-md
-                  = interview.summary
-                %p
-                  %a.ltc-safety-orange-blaze-orange{:href => "index.html"}
-                    %span<>
-                      %span<>
-                        #{interview.name}
-                        = "(#{interview.organization})" if interview.organization.present?
-                    의 제안
-                    %br
-                    스타트업 규제 없어져야 합니다. &gt;
-                    %br
-                    선거권 연령은 낮아져야 합니다. &gt;</a>
+  - if @interviews.any?
+    #bloc-17.bloc.tc-white.bgc-onyx-2
+      .container.bloc-lg
+        / - abort @interviews.inspect
+        - @interviews.each_slice(3) do |interviews_slices|
+          .row
+            - interviews_slices.each do |interview|
+              = link_to interview_path(interview) do
+                .col-sm-4
+                  = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
+                  %h3.mg-md
+                    = interview.summary
+                  - if interview.proposals.any?
+                    = link_to interview_path(interview, anchor: 'anchor-proposals') do
+                      .interview-proposals
+                        %p.interview-proposals--header
+                          .ltc-safety-orange-blaze-orange
+                            %span<>
+                              %span<>
+                                #{interview.name}
+                                = "(#{interview.organization})" if interview.organization.present?
+                            의 제안
+                          .interview-proposals--contents
+                            - interview.proposals.each do |proposal|
+                              .interview-proposal
+                                = proposal.title
 
 
   / bloc-17 END

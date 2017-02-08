@@ -33,3 +33,21 @@
   = f.submit '저장', data: { disable_with: "진행 중..." }, class: 'btn btn-sm btn-primary'
   - if @interview.persisted?
     = link_to '삭제', [:admin, @interview], method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: "정말 삭제하시겠습니까?" }
+
+.form-group
+  %h3.page-header #{Proposal.model_name.human}관리
+  - @proposals.each do |proposal|
+    = form_for [:admin, proposal] do |f|
+      = f.hidden_field :interview_id, value: @interview.id
+      .form-group
+        = f.label :title
+        = f.text_field :title, class: 'form-control'
+      .form-group
+        = f.label :image
+        = f.hidden_field :image_cache, value: f.object.image_cache
+        = f.file_field :image, class: 'form-control'
+        - if upload_file_exists?(f.object.image)
+          = image_tag f.object.image.xs.url
+      = f.submit '저장', data: { disable_with: "진행 중..." }, class: 'btn btn-sm btn-primary'
+      - if proposal.persisted?
+        = link_to '삭제', [:admin, proposal], method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: "정말 삭제하시겠습니까?" }

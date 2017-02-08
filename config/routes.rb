@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     root 'base#home'
     resources :interviews
     resources :insights
+    resources :proposals
   end
 end
