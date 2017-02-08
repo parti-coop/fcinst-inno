@@ -269,6 +269,22 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       }
     }
   }
+  .interview-header {
+    position: relative;
+    text-align: center;
+    &--label {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(132, 75, 197, 0.8);
+      width: 100%;
+      padding: 10px;
+      color: #fff;
+      &__name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
 }
 #bloc-19 {
   h2 {
@@ -278,7 +294,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     line-height: 50px;
   }
   a {
-    color: #fff;
+    color: #FF7000;
   }
   p {
     font-family: 'Open Sans';

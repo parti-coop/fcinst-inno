@@ -45,7 +45,14 @@
             - interviews_slices.each do |interview|
               = link_to interview_path(interview) do
                 .col-sm-4
-                  = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
+                  .interview-header
+                    = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
+                    .interview-header--label
+                      .interview-header--label__name
+                        = interview.name
+                      - if interview.organization.present?
+                        .interview-header--label__organization
+                          = interview.organization
                   %h3.mg-md
                     = interview.summary
                   - if interview.proposals.any?
@@ -53,11 +60,7 @@
                       .interview-proposals
                         %p.interview-proposals--header
                           .ltc-safety-orange-blaze-orange
-                            %span<>
-                              %span<>
-                                #{interview.name}
-                                = "(#{interview.organization})" if interview.organization.present?
-                            의 제안
+                            제안
                           .interview-proposals--contents
                             - interview.proposals.each do |proposal|
                               .interview-proposal
