@@ -10,7 +10,7 @@
     .collapse.navbar-collapse.navbar-1.special-dropdown-nav
       %ul.site-navigation.nav.navbar-nav.pull-right
         %li
-          = link_to '메인', root_path, class: ('active' if current_page?(controller: '/pages', action: :home))
+          = link_to '홈', root_path, class: ('active' if current_page?(controller: '/pages', action: :home))
         %li
           = link_to '소개', about_path, class: ('active' if current_page?(controller: '/pages', action: :about))
         %li

@@ -180,25 +180,16 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   margin-top:30px;
 }
 
+.wire-btn-safety-orange-blaze-orange{
+  color:#FF7000!important;
+  border-color:#FF7000!important;
+}
+
 /* Bloc text custom styling */
 
 #bloc-2 h3{
   font-size: 30px;
-}
-#bloc-14 p{
-  font-family: 'Open Sans';
-  font-weight: 600;
-  font-size: 30px;
-}
-#bloc-15 h4{
-  font-size: 18px;
-  line-height: 28px;
-}
-#bloc-15 h3{
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  line-height: 40px;
 }
 
 #bloc-9 #application-header {
@@ -211,6 +202,23 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       color: #fff;
     }
   }
+}
+
+#bloc-19 h2{
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 50px;
+}
+#bloc-19 p{
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+}
+#bloc-19 h3{
+  font-size: 18px;
+  line-height: 28px;
 }
 
 /* = NavBar
@@ -359,6 +367,10 @@ nav .caret{
 /* Prevent ugly blue glow on chrome and safari */
 button{
   outline: none!important;
+}
+
+.btn-sq{
+  border-radius: 0px;
 }
 
 .btn .caret{
