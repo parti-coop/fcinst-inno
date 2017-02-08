@@ -21,7 +21,7 @@ module Admin
         redirect_to admin_interviews_path
       else
         errors_to_flash(@interview)
-        render admin_interview_path(@interview)
+        render admin_interviews_path
       end
     end
 
