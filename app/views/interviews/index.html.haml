@@ -42,21 +42,22 @@
       - @interviews.each_slice(3) do |interviews_slices|
         .row
           - interviews_slices.each do |interview|
-            .col-sm-4
-              = image_tag interview.image_thumbnail.sm.url, class: 'img-responsive'
-              %h3.mg-md
-                = interview.summary
-              %p
-                %a.ltc-safety-orange-blaze-orange{:href => "index.html"}
-                  %span<>
+            = link_to interview_path(interview) do
+              .col-sm-4
+                = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
+                %h3.mg-md
+                  = interview.summary
+                %p
+                  %a.ltc-safety-orange-blaze-orange{:href => "index.html"}
                     %span<>
-                      #{interview.name}
-                      = "(#{interview.organization})" if interview.organization.present?
-                  의 제안
-                  %br
-                  스타트업 규제 없어져야 합니다. &gt;
-                  %br
-                  선거권 연령은 낮아져야 합니다. &gt;</a>
+                      %span<>
+                        #{interview.name}
+                        = "(#{interview.organization})" if interview.organization.present?
+                    의 제안
+                    %br
+                    스타트업 규제 없어져야 합니다. &gt;
+                    %br
+                    선거권 연령은 낮아져야 합니다. &gt;</a>
 
 
   / bloc-17 END
