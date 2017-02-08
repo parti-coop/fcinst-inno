@@ -245,8 +245,16 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   font-size: 30px;
   line-height: 42px;
 }
-#bloc-17 h3{
-  line-height: 28px;
+#bloc-17 {
+  h3 {
+    line-height: 28px;
+  }
+  .row {
+    margin-bottom: 28px;
+  }
+  img {
+    width: 100%;
+  }
 }
 #bloc-19 h2{
   font-family: 'Open Sans';

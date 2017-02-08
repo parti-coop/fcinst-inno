@@ -38,32 +38,26 @@
   / bloc-17
   #bloc-17.bloc.tc-white.bgc-onyx-2
     .container.bloc-lg
-      .row
-        .col-sm-4
-          = image_tag "interview_landit_thumb.png", class: 'img-responsive'
-          %h3.mg-md
-            "신융합 산업은 기존의 규제 방식을 그대로 고수해서는 절대로 수용될 수 없습 니다. 새로 태어난 영역이기 때문에 본질적으로 기존 산업들과 많은 차이점을 갖고 있기 때문입니다."
-          %p
-            %a.ltc-safety-orange-blaze-orange{:href => "index.html"}
-              김성준님(렌딧)의 제안
-              %br
-              스타트업 규제 없어져야 합니다. &gt;
-              %br
-              선거권 연령은 낮아져야 합니다. &gt;</a>
-              %br
+      / - abort @interviews.inspect
+      - @interviews.each_slice(3) do |interviews_slices|
+        .row
+          - interviews_slices.each do |interview|
+            .col-sm-4
+              = image_tag interview.image_thumbnail.sm.url, class: 'img-responsive'
+              %h3.mg-md
+                = interview.summary
+              %p
+                %a.ltc-safety-orange-blaze-orange{:href => "index.html"}
+                  %span<>
+                    %span<>
+                      #{interview.name}
+                      = "(#{interview.organization})" if interview.organization.present?
+                  의 제안
+                  %br
+                  스타트업 규제 없어져야 합니다. &gt;
+                  %br
+                  선거권 연령은 낮아져야 합니다. &gt;</a>
 
-            %br/
-        .col-sm-4
-          = image_tag "interview_landit_thumb.png", class: 'img-responsive'
-          %h3.mg-md
-            "신융합 산업은 기존의 규제 방식을 그대로 고수해서는 절대로 수용될 수 없습 니다. 새로 태어난 영역이기 때문에 본질적으로 기존 산업들과 많은 차이점을 갖고 있기 때문입니다."
-          %p
-            Lorem ipsum dolor sit amet, adipiscing elit Aenean commodo ligula eget.
-        .col-sm-4
-          = image_tag "interview_landit_thumb.png", class: 'img-responsive'
-          %h3.mg-md
-            "신융합 산업은 기존의 규제 방식을 그대로 고수해서는 절대로 수용될 수 없습 니다. 새로 태어난 영역이기 때문에 본질적으로 기존 산업들과 많은 차이점을 갖고 있기 때문입니다."
-          %p
-            Lorem ipsum dolor sit amet, adipiscing elit Aenean commodo ligula eget.
+
   / bloc-17 END
 / Main container END
