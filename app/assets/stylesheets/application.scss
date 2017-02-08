@@ -270,21 +270,26 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
   }
 }
-#bloc-19 h2{
-  font-family: 'Open Sans';
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 50px;
-}
-#bloc-19 p{
-  font-family: 'Open Sans';
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 40px;
-}
-#bloc-19 h3{
-  font-size: 18px;
-  line-height: 28px;
+#bloc-19 {
+  h2 {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  a {
+    color: #fff;
+  }
+  p {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 #bloc-36 a {
   color: #fff;
