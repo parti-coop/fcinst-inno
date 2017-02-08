@@ -94,6 +94,31 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   color: rgba(255,255,255,1);
 }
 
+/* Group Styles */
+
+.bloc-group{
+  width:100%;
+  display:table;
+  table-layout: fixed;
+}
+.bloc-group .bloc{
+  position:relative;
+  display: table-cell;
+  vertical-align: top;
+}
+.bloc-tile-2{
+  width:50%;
+}
+.bloc-tile-3{
+  width:33.33333333%;
+}
+.bloc-tile-4{
+  width:25%;
+}
+.bloc-tile-2 .container, .bloc-tile-3 .container, .bloc-tile-4 .container{
+  width:100%;
+}
+
 
 /* Dark theme */
 
@@ -429,6 +454,14 @@ iframe{
 -------------------------------------------------------------- */
 .icon-md{
   font-size:30px!important;
+}
+.icon-onyx{
+  color:#070020!important;
+  border-color:#070020!important;
+}
+.icon-safety-orange-blaze-orange{
+  color:#FF7000!important;
+  border-color:#FF7000!important;
 }
 
 /* = Custom Styling
