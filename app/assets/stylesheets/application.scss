@@ -214,10 +214,24 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 /* Bloc text custom styling */
+#bloc-1 {
+  h2 {
+    line-height: 40px;
+  }
+  .intro-detail {
+    margin-top: 20px;
+  }
+}
 
 #bloc-2 h3{
   font-size: 30px;
   line-height: 40px;
+}
+
+#bloc-3 {
+  .about-detail {
+    padding: 10px 20px;
+  }
 }
 
 #bloc-9 #application-header {
