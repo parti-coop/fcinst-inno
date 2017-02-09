@@ -230,7 +230,21 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 #bloc-3 {
   .about-detail {
-    padding: 10px 20px;
+    padding: 20px 30px;
+    &--content {
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        line-height: 24px;
+      }
+
+      .about-process-image {
+        width: 600px;
+      }
+    }
   }
 }
 
