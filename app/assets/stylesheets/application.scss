@@ -909,6 +909,7 @@ h3{
 
 .social-share {
   text-align: center;
+  padding-top: 18px;
 
   .jssocials-share {
     vertical-align: middle;
@@ -924,6 +925,12 @@ h3{
 
     &--twitter,
     &--facebook {
+      &.icon__white {
+        a {
+          color: #fff;
+        }
+      }
+
       a {
         color: black;
         &:hover {
@@ -937,6 +944,9 @@ h3{
       height: 30px;
       margin-top: 4px;
       background-image: asset_url('social_icon_kas_black.png');
+      &.icon__white {
+        background-image: asset_url('social_icon_kas_white.png');
+      }
       &:hover {
         background-image: asset_url('social_icon_kas_orange.png');
       }
