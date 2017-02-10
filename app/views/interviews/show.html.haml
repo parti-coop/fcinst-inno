@@ -47,19 +47,23 @@
   .bloc-group
     / bloc-13
     #bloc-13.bloc.bloc-tile-2.bgc-white.l-bloc
-      .container.bloc-sm
-        .row
-          .col-sm-12
-            %h3.mg-md.tc-safety-orange-blaze-orange
-              \&lt; 이전 인터뷰 보기
+      - if @interview.prev.present?
+        .container.bloc-sm
+          .row
+            .col-sm-12
+              %h3.mg-md
+                = link_to interview_path(@interview.prev), class: 'tc-safety-orange-blaze-orange' do
+                  \&lt; 이전 인터뷰 보기
     / bloc-13 END
     / bloc-14
     #bloc-14.bloc.bloc-tile-2.bgc-white.l-bloc
-      .container.bloc-sm
-        .row
-          .col-sm-12
-            %h3.mg-md.text-right.tc-safety-orange-blaze-orange
-              다음 인터뷰 보기 &gt;
+      - if @interview.next.present?
+        .container.bloc-sm
+          .row
+            .col-sm-12
+              %h3.mg-md.text-right
+                = link_to interview_path(@interview.next), class: 'tc-safety-orange-blaze-orange' do
+                  다음 인터뷰 보기 &gt;
     / bloc-14 END
   / Bloc Group END
 / Main container END

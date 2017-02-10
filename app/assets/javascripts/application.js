@@ -84,8 +84,7 @@ $(function(){
   inno_prepare($('body'));
   $('#video-background').YTPlayer({
       fitToBackground: true,
-      videoId: 'W0LHTWG-UmQ',
-      mute: false
+      videoId: '5nWW48oLz2s'
   });
 
   /**

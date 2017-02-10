@@ -6,4 +6,12 @@ class Interview < ApplicationRecord
 
   mount_uploader :image, ImageUploader
   mount_uploader :image_thumbnail, ImageUploader
+
+  def next
+    Interview.where("id > ?", self.id).first
+  end
+
+  def prev
+    Interview.where("id < ?", self.id).last
+  end
 end

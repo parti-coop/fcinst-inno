@@ -11,6 +11,7 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   font-family: 'NanumSquare', sans-serif;
+  word-break: keep-all;
 }
 body[class^='app-admin/'] {
   margin-top: 50px;
