@@ -1,0 +1,8 @@
+- if upvoted?(proposal)
+  .btn.btn-upvote.active
+    %i.fa.fa-thumbs-o-up
+    = proposal.upvotes_count
+- else
+  = link_to upvote_proposal_path(proposal), method: :post, remote: true, class: "btn btn-upvote" do
+    %i.fa.fa-thumbs-o-up
+    = proposal.upvotes_count > 0 ? proposal.upvotes_count : '추천'

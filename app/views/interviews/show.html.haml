@@ -32,11 +32,11 @@
         .row
           - @interview.proposals.each do |proposal|
             .col-sm-6
-              .proposal-item
+              .proposal-item[proposal]
                 = image_tag proposal.image.md.url, class: 'img-responsive', width: '100%'
-                = link_to upvote_proposal_path(proposal), method: :post, class: "btn btn-upvote #{'active' if upvoted?(proposal)}" do
-                  %i.fa.fa-thumbs-o-up
-                  = upvoted?(proposal) ? proposal.upvotes_count : '추천'
+                .js-upvote
+                  = render 'upvotes/button', proposal: proposal
+
   / bloc-11 END
   / bloc-12
   #bloc-12.bloc.bgc-white.l-bloc
