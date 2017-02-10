@@ -4,6 +4,7 @@
 //= require blocs
 //= require jssocials
 //= require kakao
+//= require jquery.youtubebackground
 //= require unobtrusive_flash
 //= require unobtrusive_flash_bootstrap
 
@@ -76,4 +77,9 @@ var inno_prepare = function($base) {
 
 $(function(){
   inno_prepare($('body'));
+  $('#video-background').YTPlayer({
+      fitToBackground: true,
+      videoId: 'W0LHTWG-UmQ',
+      mute: false
+  });
 });

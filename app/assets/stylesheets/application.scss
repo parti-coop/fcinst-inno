@@ -21,6 +21,17 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 #page-loading-blocs-notifaction{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF asset_url("pageload-spinner.gif") no-repeat center center;}
 
+#video-background{
+ position: relative;
+ background: transparent;
+}
+
+.ytplayer-container{
+ position: absolute;
+ top: 0;
+ z-index: -1;
+}
+
 /* = Blocs
 -------------------------------------------------------------- */
 
