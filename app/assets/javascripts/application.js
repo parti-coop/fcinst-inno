@@ -4,6 +4,8 @@
 //= require blocs
 //= require jssocials
 //= require kakao
+//= require unobtrusive_flash
+//= require unobtrusive_flash_bootstrap
 
 Kakao.init('929bb882ab44bacf4c2c27a9de2156c6');
 

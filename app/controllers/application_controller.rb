@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :prepare_meta_tags, if: "request.get?"
+  after_action :prepare_unobtrusive_flash
 
   def errors_to_flash(model)
     flash[:notice] = model.errors.full_messages.join('<br>').html_safe

@@ -6,9 +6,6 @@
     = f.label :organization
     = f.text_field :organization, class: 'form-control'
   .form-group
-    = f.label :introduction
-    ~ f.text_area :introduction, class: 'form-control'
-  .form-group
     = f.label :image
     = f.hidden_field :image_cache, value: f.object.image_cache
     = f.file_field :image, class: 'form-control'
@@ -26,9 +23,6 @@
   .form-group
     = f.label :summary
     ~ f.text_area :summary, class: 'form-control'
-  .form-group
-    = f.label :video_url
-    = f.text_field :video_url, class: 'form-control'
 
   = f.submit '저장', data: { disable_with: "진행 중..." }, class: 'btn btn-sm btn-primary'
   - if @interview.persisted?

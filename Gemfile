@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 gem 'bootswatch-rails'
 gem 'haml-rails', '~> 0.9.0'
+gem 'unobtrusive_flash', '~> 3.2'
 
 # notification
 gem 'slack-notifier', '~> 1.4'

@@ -21,7 +21,7 @@ module Admin
         redirect_to admin_interviews_path
       else
         errors_to_flash(@interview)
-        render admin_interviews_path
+        render 'admin/interviews/new'
       end
     end
 
@@ -32,7 +32,7 @@ module Admin
         redirect_to admin_interview_path(@interview)
       else
         errors_to_flash(@interview)
-        render admin_interview_path(@interview)
+        render 'admin/interviews/index'
       end
     end
 
@@ -48,7 +48,7 @@ module Admin
     private
 
     def interview_params
-      params.require(:interview).permit(:name, :organization, :image, :image_thumbnail, :message, :video_url, :introduction, :summary)
+      params.require(:interview).permit(:name, :organization, :image, :image_thumbnail, :message, :summary)
     end
 
     def get_or_build_proposals
