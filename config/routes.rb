@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about', as: :about
 
+  post 'proposals/:id/upvote', to: 'proposals#upvote', as: :upvote_proposal
+
   resources :interviews
   resources :insights
 

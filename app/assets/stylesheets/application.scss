@@ -273,6 +273,30 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
   }
 }
+
+#bloc-11 {
+  .proposal-item {
+    text-align: center;
+
+    .btn-upvote {
+      margin-top: 34px;
+      border: 1px solid #ff7000;
+      border-radius: 0;
+      color: #ff7000;
+      background-color: #fff;
+      padding: 12px 20px;
+      font-size: 20px;
+      min-width: 110px;
+
+      &.active {
+        border-color: #fff;
+        background-color: #ff7000;
+        color: #fff;
+      }
+    }
+  }
+}
+
 #bloc-16 {
   padding: 20px 0 20px;
   h3 {

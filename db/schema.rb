@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210090543) do
+ActiveRecord::Schema.define(version: 20170210141141) do
 
   create_table "interviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name",                          null: false
@@ -24,11 +24,12 @@ ActiveRecord::Schema.define(version: 20170210090543) do
   end
 
   create_table "proposals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC" do |t|
-    t.string   "title",        null: false
+    t.string   "title",                     null: false
     t.string   "image"
-    t.integer  "interview_id", null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "interview_id",              null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "upvotes_count", default: 0
     t.index ["interview_id"], name: "index_proposals_on_interview_id", using: :btree
   end
 
