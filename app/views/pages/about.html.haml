@@ -50,26 +50,50 @@
                 \- 정책제안 발표 및 캠페인
                 %br
                 \- 정부 정책, 정당 정책, 선거 공약, 헌법과 법률 개정안 등에 반영
-              = image_tag 'about_process_2.png', class: 'about-process-image'
+              = image_tag 'about_process_web.png', class: 'about-process-image'
 
-      .row.voffset
-        .col-sm-12.col-md-6.col-md-offset-3
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-twitter.icon-md.icon-onyx
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-facebook.icon-md.icon-onyx
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-dribbble.icon-md.icon-onyx
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-instagram.icon-md.icon-onyx
+      .voffset
+        .social-share
+          - if browser.device.mobile?
+            %ul.list-inline.social-icon-mobile--wrapper
+              - base_data = {action: 'inno-share', 'share-url': root_url, 'share-text': meta_tags['description'], 'share-sitename': meta_tags['og']['site_name'] }
+              - %w(facebook twitter kakao-link kakao-story).each do |provider|
+
+                - data = base_data.merge('share-provider': provider)
+
+                - if provider == 'kakao-link'
+                  - hide_kakao_link = (! browser.device.mobile?) ? ' hide' : ''
+                  - data = data.merge('share-image': meta_tags['image'], 'share-image-width': '1200', 'share-image-height': '630', 'share-logo': asset_url('social_icon_kakao_orange.png'), 'share-css': 'social-icon--kakao__mobile')
+                - if provider == 'twitter'
+                  - data = data.merge('share-text': "#당신은혁신의편입니까 혁신을 키우기 위한 정책 제안 프로젝트", 'share-logo': 'fa fa-twitter', 'share-css': 'social-icon--twitter__mobile')
+                - if provider == 'facebook'
+                  - data = data.merge('share-logo': 'fa fa-facebook', 'share-css': 'social-icon--facebook__mobile')
+                %li.share-item.jssocials{class: "share-#{provider}#{hide_kakao_link}", data: data }
+                  .jssocials-shares
+                    .jssocials-share
+                      - if provider == 'kakao-story'
+                        = image_tag 'social_icon_kas_orange.png', class: 'social-icon--kas__mobile'
+                      - if provider == 'kakao-link'
+                        = image_tag 'social_icon_kakao_orange.png', class: 'social-icon--kakao__mobile'
+          - else
+            %ul.list-inline.social-icon
+              - base_data = {action: 'inno-share', 'share-url': root_url, 'share-text': meta_tags['description'] }
+              - %w(twitter facebook kakao-link kakao-story).each do |provider|
+
+                - data = base_data.merge('share-provider': provider)
+
+                - if provider == 'kakao-link'
+                  - hide_kakao_link = (! browser.device.mobile?) ? ' hide' : ''
+                  - data = data.merge('share-image': meta_tags['image'], 'share-image-width': '1200', 'share-image-height': '630', 'share-css': 'social-icon--kas')
+                - if provider == 'twitter'
+                  - data = data.merge('share-text': "#당신은혁신의편입니까 혁신을 키우기 위한 정책 제안 프로젝트", 'share-logo': 'fa fa-twitter', 'share-css': 'social-icon--twitter')
+                - if provider == 'facebook'
+                  - data = data.merge('share-logo': 'fa fa-facebook', 'share-css': 'social-icon--facebook')
+                %li.share-item.jssocials{class: "share-#{provider}#{hide_kakao_link}", data: data }
+                  .jssocials-shares
+                    .jssocials-share
+                      - if provider == 'kakao-story'
+                        .social-icon--kakao
 
   / bloc-3 END
 
@@ -110,8 +134,6 @@
             %br
             장영화 (오이씨)
             %br
-            정경선 (루트임팩트)
-            %br
             엄윤미 (씨프로그램)
             %br
             이혜영 (아쇼카한국)
@@ -146,15 +168,5 @@
           %h3.mg-md
             법률자문단
           %p
-
-
-
-
-
-
-
-
-
-
 
 / Main container END

@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "jssocials";
 
 body{
   margin:0;
@@ -874,6 +875,42 @@ h3{
     }
     &.active {
       color: #fff;
+    }
+  }
+}
+
+.social-share {
+  text-align: center;
+
+  .jssocials-share {
+    vertical-align: middle;
+  }
+
+  .social-icon {
+    font-size: 32px;
+
+    li {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &--twitter,
+    &--facebook {
+      a {
+        color: black;
+        &:hover {
+          color: #FF7000;
+        }
+      }
+    }
+    &--kakao {
+      width: 30px;
+      height: 30px;
+      margin-top: 8px;
+      background-image: asset_url('social_icon_kas_black.png');
+      &:hover {
+        background-image: asset_url('social_icon_kas_orange.png');
+      }
     }
   }
 }
