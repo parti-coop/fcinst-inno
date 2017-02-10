@@ -20,26 +20,7 @@
             %br
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
     .container.fill-bloc-bottom-edge
-      .row
-        .col-sm-12
-          .row.voffset
-            .col-sm-12.col-md-6.col-md-offset-3
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-twitter.icon-md
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-facebook.icon-md
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-dribbble.icon-md
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-instagram.icon-md
+      = render 'pages/social_share_panel', from: 'insights_list'
 
   / bloc-6 END
   / bloc-7
