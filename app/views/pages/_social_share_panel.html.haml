@@ -1,0 +1,46 @@
+- from ||= nil
+- share_text_twitter = "#당신은혁신의편입니까 혁신을 키우기 위한 정책 제안 프로젝트"
+- if from == 'interview'
+  - share_text_twitter = "당신은혁신의편입니까 #{interviewee}님의 인터뷰를 들어보세요"
+
+.social-share
+  - if browser.device.mobile?
+    %ul.list-inline.social-icon-mobile--wrapper
+      - base_data = {action: 'inno-share', 'share-url': request.original_url, 'share-text': meta_tags['description'], 'share-sitename': meta_tags['og']['site_name'] }
+      - %w(facebook twitter kakao-link kakao-story).each do |provider|
+
+        - data = base_data.merge('share-provider': provider)
+
+        - if provider == 'kakao-link'
+          - hide_kakao_link = (! browser.device.mobile?) ? ' hide' : ''
+          - data = data.merge('share-image': meta_tags['image'], 'share-image-width': '1200', 'share-image-height': '630', 'share-logo': asset_url('social_icon_kakao_orange.png'), 'share-css': 'social-icon--kakao__mobile')
+        - if provider == 'twitter'
+          - data = data.merge('share-text': share_text_twitter, 'share-logo': 'fa fa-twitter', 'share-css': 'social-icon--twitter__mobile')
+        - if provider == 'facebook'
+          - data = data.merge('share-logo': 'fa fa-facebook', 'share-css': 'social-icon--facebook__mobile')
+        %li.share-item.jssocials{class: "share-#{provider}#{hide_kakao_link}", data: data }
+          .jssocials-shares
+            .jssocials-share
+              - if provider == 'kakao-story'
+                = image_tag 'social_icon_kas_orange.png', class: 'social-icon--kas__mobile'
+              - if provider == 'kakao-link'
+                = image_tag 'social_icon_kakao_orange.png', class: 'social-icon--kakao__mobile'
+  - else
+    %ul.list-inline.social-icon
+      - base_data = {action: 'inno-share', 'share-url': request.original_url, 'share-text': meta_tags['description'] }
+      - %w(twitter facebook kakao-link kakao-story).each do |provider|
+
+        - data = base_data.merge('share-provider': provider)
+
+        - if provider == 'kakao-link'
+          - hide_kakao_link = (! browser.device.mobile?) ? ' hide' : ''
+          - data = data.merge('share-image': meta_tags['image'], 'share-image-width': '1200', 'share-image-height': '630', 'share-css': 'social-icon--kas')
+        - if provider == 'twitter'
+          - data = data.merge('share-text': share_text_twitter, 'share-logo': 'fa fa-twitter', 'share-css': 'social-icon--twitter')
+        - if provider == 'facebook'
+          - data = data.merge('share-logo': 'fa fa-facebook', 'share-css': 'social-icon--facebook')
+        %li.share-item.jssocials{class: "share-#{provider}#{hide_kakao_link}", data: data }
+          .jssocials-shares
+            .jssocials-share
+              - if provider == 'kakao-story'
+                .social-icon--kakao

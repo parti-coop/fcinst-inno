@@ -13,24 +13,8 @@
             = @interview.organization if @interview.organization.present?
           .interview-summary
             = simple_format @interview.summary if @interview.summary.present?
-      .row.voffset
-        .col-sm-12.col-md-6.col-md-offset-3
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-twitter.icon-md.icon-safety-orange-blaze-orange
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-facebook.icon-md.icon-safety-orange-blaze-orange
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-dribbble.icon-md.icon-safety-orange-blaze-orange
-          .col-xs-3
-            .text-center
-              %a.social{:href => "index.html"}
-                %span.fa.fa-instagram.icon-md.icon-safety-orange-blaze-orange
+      .voffset
+        = render 'pages/social_share_panel', from: 'interview', interviewee: @interview.name
   / bloc-9 END
   / bloc-10
   #bloc-10.bloc.bgc-white.l-bloc

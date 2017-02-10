@@ -14,26 +14,7 @@
             어떻게 해결할 수 있을까요?
             %br/
     .container.fill-bloc-bottom-edge
-      .row
-        .col-sm-12
-          .row.voffset
-            .col-sm-12.col-md-6.col-md-offset-3
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-twitter.icon-md
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-facebook.icon-md
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-dribbble.icon-md
-              .col-xs-3
-                .text-center
-                  %a.social{:href => "index.html"}
-                    %span.fa.fa-instagram.icon-md
+      = render 'pages/social_share_panel'
   / bloc-16 END
   / bloc-17
   - if @interviews.any?

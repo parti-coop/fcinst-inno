@@ -261,7 +261,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-16 {
-  padding: 20px 0 36px;
+  padding: 20px 0 20px;
   h3 {
     font-size: 30px;
     line-height: 42px;
@@ -904,6 +904,7 @@ h3{
       }
     }
     &--kakao {
+      cursor: pointer;
       width: 30px;
       height: 30px;
       margin-top: 8px;
