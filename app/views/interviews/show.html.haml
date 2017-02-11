@@ -1,11 +1,8 @@
 .page-container
   / bloc-9
-  #bloc-9.bloc.bloc-fill-screen.lake-hero-bloc.bgc-safety-orange-blaze-orange.d-bloc{ style: "background-image: url(#{image_url(@interview.image.lg.url)})"}
+  #bloc-9.bloc.bgc-safety-orange-blaze-orange.d-bloc{ style: "background-image: url(#{image_url(@interview.image.lg.url)})", class: "#{'bloc-fill-screen' unless browser.device.mobile?}"}
     = render 'application/header'
-    .container
-      .row
-        .col-sm-12
-    .container.fill-bloc-bottom-edge
+    .container.fill-bloc-bottom-edge.hidden-xs
       .row.voffset-lg.bgc-onyx
         .col-sm-12
           %h3.mg-md
@@ -21,6 +18,8 @@
     .container.bloc-lg
       .row
         .col-sm-12
+          .interview-image.visible-xs
+            = image_tag @interview.image.md.url
           .interview-message
             = simple_format @interview.message if @interview.message.present?
   / bloc-10 END
@@ -47,23 +46,18 @@
   .bloc-group
     / bloc-13
     #bloc-13.bloc.bloc-tile-2.bgc-white.l-bloc
-      - if @interview.prev.present?
-        .container.bloc-sm
-          .row
-            .col-sm-12
+      .container.bloc-sm
+        .row
+          .col-sm-6.col-xs-6
+            - if @interview.prev.present?
               %h3.mg-md
                 = link_to interview_path(@interview.prev), class: 'tc-safety-orange-blaze-orange' do
                   \&lt; 이전 인터뷰 보기
-    / bloc-13 END
-    / bloc-14
-    #bloc-14.bloc.bloc-tile-2.bgc-white.l-bloc
-      - if @interview.next.present?
-        .container.bloc-sm
-          .row
-            .col-sm-12
+          .col-sm-6.col-xs-6
+            - if @interview.next.present?
               %h3.mg-md.text-right
                 = link_to interview_path(@interview.next), class: 'tc-safety-orange-blaze-orange' do
                   다음 인터뷰 보기 &gt;
-    / bloc-14 END
+    / bloc-13 END
   / Bloc Group END
 / Main container END

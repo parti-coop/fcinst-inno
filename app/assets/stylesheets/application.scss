@@ -351,10 +351,31 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
   }
 }
+#bloc-10 {
+  .bloc-lg {
+    @media (max-width: 767px){
+      padding: 0;
+    }
+  }
+  .interview-message {
+    @media (max-width: 767px){
+      margin: 10px 0;
+    }
+  }
+}
 
 #bloc-11 {
+  .bloc-lg {
+    @media (max-width: 767px){
+      padding-bottom: 0;
+    }
+  }
   .proposal-item {
     text-align: center;
+    @media (max-width: 767px){
+      margin-bottom: 40px;
+    }
+
 
     .btn-upvote {
       margin-top: 34px;
@@ -365,6 +386,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       padding: 12px 20px;
       font-size: 20px;
       min-width: 110px;
+      @media (max-width: 767px){
+        font-size: 14px;
+        padding: 6px 10px;
+        min-width: 70px;
+        margin-top: 18px;
+      }
 
       &.active {
         border-color: #fff;
@@ -375,7 +402,13 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
   }
 }
-
+#bloc-13 {
+  a {
+    @media (max-width: 767px){
+      font-size: 14px;
+    }
+  }
+}
 #bloc-16 {
   padding: 20px 0 20px;
   @media (max-width: 767px){
