@@ -10,7 +10,7 @@
 
 .social-share
   - if browser.device.mobile?
-    %ul.list-inline.social-icon-mobile--wrapper
+    %ul.list-inline.social-icon
       - base_data = {action: 'inno-share', 'share-url': request.original_url, 'share-text': meta_tags['description'], 'share-sitename': meta_tags['og']['site_name'] }
       - %w(facebook twitter kakao-link kakao-story).each do |provider|
 
@@ -18,25 +18,25 @@
 
         - if provider == 'kakao-link'
           - hide_kakao_link = (! browser.device.mobile?) ? ' hide' : ''
-          - data = data.merge('share-image': meta_tags['image'], 'share-image-width': '1200', 'share-image-height': '630', 'share-css': "social-icon--kakao__mobile #{'icon__white' if icon_color == 'white'}")
+          - data = data.merge('share-image': meta_tags['image'], 'share-image-width': '1200', 'share-image-height': '630', 'share-css': "social-icon--kakao #{'icon__white' if icon_color == 'white'}")
         - if provider == 'twitter'
-          - data = data.merge('share-text': share_text_twitter, 'share-logo': 'fa fa-twitter', 'share-css': "social-icon--twitter__mobile #{'icon__white' if icon_color == 'white'}")
+          - data = data.merge('share-text': share_text_twitter, 'share-logo': 'fa fa-twitter', 'share-css': "social-icon--twitter #{'icon__white' if icon_color == 'white'}")
         - if provider == 'facebook'
-          - data = data.merge('share-logo': 'fa fa-facebook', 'share-css': "social-icon--facebook__mobile #{'icon__white' if icon_color == 'white'}")
+          - data = data.merge('share-logo': 'fa fa-facebook', 'share-css': "social-icon--facebook #{'icon__white' if icon_color == 'white'}")
         %li.share-item.jssocials{class: "share-#{provider}#{hide_kakao_link}", data: data }
           .jssocials-shares
             - if icon_color == 'white'
               .jssocials-share
                 - if provider == 'kakao-story'
-                  = image_tag 'social_icon_kas_white.png', class: 'social-icon--kas__mobile'
+                  = image_tag 'social_icon_kas_white.png', class: 'social-icon--kas'
                 - if provider == 'kakao-link'
-                  = image_tag 'social_icon_kakao_white.png', class: 'social-icon--kakao__mobile'
+                  = image_tag 'social_icon_kakao_white.png', class: 'social-icon--kakao'
             - else
               .jssocials-share
                 - if provider == 'kakao-story'
-                  = image_tag 'social_icon_kas_white.png', class: 'social-icon--kas__mobile'
+                  = image_tag 'social_icon_kas_orange.png', class: 'social-icon--kas'
                 - if provider == 'kakao-link'
-                  = image_tag 'social_icon_kakao_white.png', class: 'social-icon--kakao__mobile'
+                  = image_tag 'social_icon_kakao_orange.png', class: 'social-icon--kakao'
   - else
     %ul.list-inline.social-icon
       - base_data = {action: 'inno-share', 'share-url': request.original_url, 'share-text': meta_tags['description'] }
@@ -55,4 +55,4 @@
           .jssocials-shares
             .jssocials-share
               - if provider == 'kakao-story'
-                .social-icon--kakao{class: "#{'icon__white' if icon_color == 'white'}"}
+                .social-icon--kas{class: "#{'icon__white' if icon_color == 'white'}"}

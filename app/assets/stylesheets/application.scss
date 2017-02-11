@@ -316,6 +316,15 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       padding: 0 10px;
     }
   }
+  .voffset {
+    margin: 10px;
+  }
+}
+
+#bloc-4 {
+  @media (max-width: 767px){
+    text-align: center;
+  }
 }
 
 #bloc-9 #application-header {
@@ -960,7 +969,7 @@ h3{
        display:none;
     }
     .voffset{
-        margin-top:5px;
+        margin-top:0;
     }
     .voffset-md{
         margin-top:20px;
@@ -1014,17 +1023,29 @@ h3{
 .social-share {
   text-align: center;
   padding-top: 18px;
+  @media (max-width: 767px){
+    font-size: 30px;
+    padding-top: 0;
+  }
 
   .jssocials-share {
     vertical-align: middle;
   }
+  ul {
+    @media (max-width: 767px){
+      margin-bottom: 0;
+    }
+  }
 
   .social-icon {
     font-size: 32px;
-
     li {
       padding-left: 40px;
       padding-right: 40px;
+      @media (max-width: 767px){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
 
     &--twitter,
@@ -1037,12 +1058,15 @@ h3{
 
       a {
         color: black;
+        @media (max-width: 767px){
+          color: #FF7000;
+        }
         &:hover {
           color: #FF7000;
         }
       }
     }
-    &--kakao {
+    &--kas {
       cursor: pointer;
       width: 30px;
       height: 30px;
