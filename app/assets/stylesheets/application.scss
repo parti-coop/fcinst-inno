@@ -283,6 +283,14 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-3 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h2 {
+    @media (max-width: 767px){
+      font-size: 24px;
+    }
+  }
   .about-detail {
     padding: 20px 30px;
     &--content {
@@ -297,7 +305,15 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
       .about-process-image {
         width: 600px;
+        @media (max-width: 767px){
+          width: 80%;
+        }
       }
+    }
+  }
+  .indent {
+    @media (max-width: 767px){
+      padding: 0 10px;
     }
   }
 }

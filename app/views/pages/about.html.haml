@@ -1,6 +1,6 @@
 .page-container
   / bloc-3
-  #bloc-3.bloc.bloc-fill-screen.lake-hero-bloc.tc-white.bgc-white.l-bloc{style: "background-image: url(#{asset_url('about_background.jpg')});"}
+  #bloc-3.bloc.tc-white.bgc-white.l-bloc{style: "background-image: url(#{asset_url('about_background.jpg')});", class: "#{'bloc-fill-screen' unless browser.device.mobile?}"}
     = render 'application/header'
     .container
       .row.hidden-sm.hidden-xs.object-hidden
@@ -50,7 +50,10 @@
                 \- 정책제안 발표 및 캠페인
                 %br
                 \- 정부 정책, 정당 정책, 선거 공약, 헌법과 법률 개정안 등에 반영
-              = image_tag 'about_process_web.png', class: 'about-process-image'
+              - if browser.device.mobile?
+                = image_tag 'about_process_mobile.png', class: 'about-process-image'
+              - else
+                = image_tag 'about_process_web.png', class: 'about-process-image'
 
       .voffset
         = render 'pages/social_share_panel'
@@ -64,7 +67,7 @@
   #bloc-4.bloc.bgc-black.d-bloc{:class => "bg-gradation-background"}
     .container.bloc-md
       .row
-        .col-sm-3
+        .col-sm-3.col-xs-6
           %h3.mg-md
             참여자
           %p
@@ -101,7 +104,7 @@
             한상엽 (소풍)
             %br
             정상훈 ((전)혁신파크)
-        .col-sm-3
+        .col-sm-3.col-xs-6
           %h3.mg-md
             연구팀
           %p
@@ -120,11 +123,12 @@
             박은지 (빠띠)
             %br
             변형석 (트래블러스맵)
-        .col-sm-3
+        .col-sm-3.col-xs-6
           %h3.mg-md
             정책자문단
           %p
-        .col-sm-3
+
+        .col-sm-3.col-xs-6
           %h3.mg-md
             법률자문단
           %p
