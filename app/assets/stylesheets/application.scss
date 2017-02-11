@@ -327,6 +327,19 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 
+#bloc-6 {
+  .insight-item {
+    @media (max-width: 767px){
+      margin: 20px 5px 0;
+    }
+  }
+  .social-share {
+    @media (max-width: 767px){
+      padding: 10px;
+    }
+  }
+}
+
 #bloc-9 #application-header {
   a {
     color: black;
@@ -813,12 +826,21 @@ h3{
 
 .bg-map{
   background-image: asset_url('intro_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .bg-gradation-background{
   background-image: asset_url('gradation_background.png');
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .bg-interview-landit{
   background-image: asset_url('interview_landit.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
