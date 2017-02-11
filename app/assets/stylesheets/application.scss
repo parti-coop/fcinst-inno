@@ -25,12 +25,24 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 #video-background{
  position: relative;
  background: transparent;
+ margin: 0 -50px;
 }
 
 .ytplayer-container{
- position: absolute;
- top: 0;
- z-index: -1;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+ @media (max-width: 767px){
+  right: 0;
+  left: 0;
+ }
+
+ .ytplayer-player {
+  @media (max-width: 767px){
+    width: 100% !important;
+    height: auto !important;
+  }
+ }
 }
 
 /* = Blocs
@@ -86,6 +98,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   right: 0;
   z-index: 1;
   transform: none;
+  @media (max-width: 767px){
+    margin: auto;
+  }
 }
 .bloc-fill-screen .fill-bloc-top-edge{
   top:0;
@@ -232,9 +247,16 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 #bloc-1 {
   h2 {
     line-height: 40px;
+    @media (max-width: 767px){
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
   .intro-detail {
     margin-top: 20px;
+  }
+  .mobile-button-wrapper {
+    padding: 10px 25px 0;
   }
 }
 

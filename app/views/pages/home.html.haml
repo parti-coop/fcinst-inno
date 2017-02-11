@@ -1,8 +1,8 @@
-#video-background
 .page-container
   / bloc-0
   #bloc-0.bloc.bloc-fill-screen.lake-hero-bloc.d-bloc
     = render 'application/header'
+    #video-background
   / bloc-0 END
   / bloc-1
   #bloc-1.bloc.tc-white.bgc-onyx
@@ -17,7 +17,7 @@
             새로운 사회시스템을 위한
             %br
             정책을 만듭니다.
-          = link_to '프로젝트 소개', about_path, class: 'btn btn-lg btn-sq btn-wire wire-btn-safety-orange-blaze-orange'
+          = link_to '프로젝트 소개', about_path, class: 'btn btn-lg btn-sq btn-wire wire-btn-safety-orange-blaze-orange hidden-xs'
 
         .col-sm-6
           %p.intro-detail
@@ -27,6 +27,8 @@
             혁신을 이루기 위해서는 더 많은 혁신의 편이 필요합니다.
             %br
             당신은 혁신의 편입니까?
+        .mobile-button-wrapper.visible-xs
+          = link_to '프로젝트 소개', about_path, class: 'btn btn-lg btn-sq btn-wire wire-btn-safety-orange-blaze-orange '
 
 
   / bloc-2
