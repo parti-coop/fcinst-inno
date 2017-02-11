@@ -9,7 +9,9 @@
           %h3.mg-md.tc-safety-orange-blaze-orange
             인터뷰
           %p
-            사회 혁신의 맨 앞이기에 누구보다 먼저 겪는 어려움.
+            사회 혁신의 맨 앞이기에
+            %br.visible-xs
+            누구보다 먼저 겪는 어려움.
             %br>/
             어떻게 해결할 수 있을까요?
             %br/
@@ -25,27 +27,28 @@
           .row
             - interviews_slices.each do |interview|
               = link_to interview_path(interview) do
-                .col-sm-4
-                  .interview-header
-                    = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
-                    .interview-header--label
-                      .interview-header--label__name
-                        = interview.name
-                      - if interview.organization.present?
-                        .interview-header--label__organization
-                          = interview.organization
-                  %h3.mg-md
-                    = interview.summary
-                  - if interview.proposals.any?
-                    = link_to interview_path(interview, anchor: 'anchor-proposals') do
-                      .interview-proposals
-                        %p.interview-proposals--header
-                          .ltc-safety-orange-blaze-orange
-                            제안
-                          .interview-proposals--contents
-                            - interview.proposals.each do |proposal|
-                              .interview-proposal
-                                = proposal.title
+                .col-sm-4.col-xs-12
+                  .interview-item
+                    .interview-header
+                      = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
+                      .interview-header--label
+                        .interview-header--label__name
+                          = interview.name
+                        - if interview.organization.present?
+                          .interview-header--label__organization
+                            = interview.organization
+                    %h3.mg-md
+                      = interview.summary
+                    - if interview.proposals.any?
+                      = link_to interview_path(interview, anchor: 'anchor-proposals') do
+                        .interview-proposals
+                          %p.interview-proposals--header
+                            .ltc-safety-orange-blaze-orange
+                              제안
+                            .interview-proposals--contents
+                              - interview.proposals.each do |proposal|
+                                .interview-proposal
+                                  = proposal.title
 
 
   / bloc-17 END

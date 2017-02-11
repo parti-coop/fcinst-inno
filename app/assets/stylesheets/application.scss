@@ -378,22 +378,46 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 #bloc-16 {
   padding: 20px 0 20px;
+  @media (max-width: 767px){
+    padding: 0;
+  }
   h3 {
     font-size: 30px;
     line-height: 42px;
+    @media (max-width: 767px){
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+  }
+  p {
+    font-size: 30px;
+    line-height: 42px;
+    @media (max-width: 767px){
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
   .interview-header {
     padding-top: 30px;
+    @media (max-width: 767px){
+      padding-top: 0;
+    }
   }
-}
-#bloc-16 p{
-  font-size: 30px;
-  line-height: 42px;
+  .social-share {
+    @media (max-width: 767px){
+      padding: 10px;
+    }
+  }
 }
 #bloc-17 {
   h3 {
     line-height: 28px;
     color: #fff;
+    @media (max-width: 767px){
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
   }
   .row {
     margin-bottom: 28px;
@@ -401,7 +425,15 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   img {
     width: 100%;
   }
+  .interview-item {
+    @media (max-width: 767px){
+      margin-bottom: 40px;
+    }
+  }
   .interview-proposals {
+    @media (max-width: 767px){
+      padding: 0 10px;
+    }
     &--header {
       margin-bottom: 0;
     }
