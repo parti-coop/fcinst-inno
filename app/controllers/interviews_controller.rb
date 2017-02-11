@@ -1,8 +1,7 @@
 class InterviewsController < ApplicationController
   def index
     reset_meta_tags_for_index
-    @interviews = []
-    6.times { @interviews.push(Interview.first) }
+    @interviews = Interview.all
   end
 
   def show

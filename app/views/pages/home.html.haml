@@ -34,10 +34,10 @@
   / bloc-2
   #bloc-2.bloc.bgc-safety-orange-blaze-orange.d-bloc{:class => "bg-gradation-background"}
     .container.bloc-lg
-      .row.hidden-sm.hidden-xs.object-hidden
+      .row.object-hidden
         .col-sm-6
           %h3.mg-md
-            인사이트&nbsp;
+            %span.tc-safety-orange-blaze-orange 인사이트
             %br
 
             %br
@@ -48,40 +48,43 @@
             인사이트를 공유합니다.
             %br
 
-          = link_to '인사이트 보고 의견 남기기', insights_path, class: 'btn btn-lg btn-wire btn-sq wire-btn-safety-orange-blaze-orange'
+          = link_to '인사이트 보고 의견 남기기', insights_path, class: 'btn btn-lg btn-wire btn-sq wire-btn-safety-orange-blaze-orange hidden-xs'
         .col-sm-6
-          %p
+          .insight-item
+            %p
 
-            %br
+              %br
 
-            %br
+              %br
 
-            %br
-            %u 사회적기업 FGI
-            &nbsp; &nbsp;&nbsp;
-            %br
+              %br
+              %u 사회적기업 FGI
+              &nbsp; &nbsp;&nbsp;
+              %br
 
-            %br
-            OFA is committed to mobilizing and training
-            %br
-            the next generation of progressive organizers and leaders,
-            %br
-            because real, lasting change doesn&rsquo;t just happen on its own—
-            %br
-            it requires a program, it requires organizing,
-            %br
-            and it requires people like you.
-            %br
+              %br
+              OFA is committed to mobilizing and training
+              %br
+              the next generation of progressive organizers and leaders,
+              %br
+              because real, lasting change doesn&rsquo;t just happen on its own—
+              %br
+              it requires a program, it requires organizing,
+              %br
+              and it requires people like you.
+              %br
 
-            %br
-            With grassroots chapters in neighborhoods across the country,
-            %br
-            OFA volunteers are building this movement from the ground up,
-            %br
-            person to person, community by community—
-            %br
-            because democracy isn&rsquo;t a spectator sport.&nbsp;
-            %br
+              %br
+              With grassroots chapters in neighborhoods across the country,
+              %br
+              OFA volunteers are building this movement from the ground up,
+              %br
+              person to person, community by community—
+              %br
+              because democracy isn&rsquo;t a spectator sport.&nbsp;
+              %br
+        .mobile-button-wrapper.visible-xs
+          = link_to '인사이트 보고 의견 남기기', insights_path, class: 'btn btn-lg btn-wire btn-sq wire-btn-safety-orange-blaze-orange'
 
   / bloc-2 END
 
@@ -94,16 +97,18 @@
     .container.bloc-lg
       .row
         .col-sm-6
-          %h2.mg-md.device-bloc-text.tc-safety-orange-blaze-orange
-            인터뷰
-          %p.mg-lg.device-bloc-text-p
-            사회 혁신의 맨 앞이기에
-            %br
-            누구보다 먼저 겪는 어려움.
-            %br
-            어떻게 해결할 수 있을까요?
-            %br
-          = link_to '6명의 인터뷰 더 보기', interviews_path, class: 'btn btn-wire btn-lg device-bloc-button btn-sq wire-btn-safety-orange-blaze-orange'
+          .interview-list-intro
+            %h2.mg-md.device-bloc-text.tc-safety-orange-blaze-orange
+              인터뷰
+            %p.mg-lg.device-bloc-text-p
+              사회 혁신의 맨 앞이기에
+              %br
+              누구보다 먼저 겪는 어려움.
+              %br
+              어떻게 해결할 수 있을까요?
+              %br
+            .button-wrapper
+              = link_to '6명의 인터뷰 더 보기', interviews_path, class: 'btn btn-wire btn-lg device-bloc-button btn-sq wire-btn-safety-orange-blaze-orange'
 
         .col-sm-6
           = image_tag "interview_landit_thumb.png", class: 'img-responsive'
@@ -112,7 +117,7 @@
             %br
             새로 태어난 영역이기 때문에 본질적으로 기존 산업들과 많은 차이점을 갖고 있기 때문입니다. "
             %br/
-            %br/
+            %br
             = link_to interview_path(Interview.first) do
               %u 김성준님의 제안 더보기
 / Footer - bloc-19 END

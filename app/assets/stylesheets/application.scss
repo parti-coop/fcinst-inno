@@ -244,25 +244,42 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 /* Bloc text custom styling */
+.mobile-button-wrapper {
+  padding: 10px 25px 0;
+  .btn {
+    font-size: 14px;
+  }
+}
 #bloc-1 {
   h2 {
     line-height: 40px;
     @media (max-width: 767px){
       font-size: 18px;
       line-height: 30px;
+      span {
+        font-size: 24px;
+      }
     }
   }
   .intro-detail {
     margin-top: 20px;
   }
-  .mobile-button-wrapper {
-    padding: 10px 25px 0;
-  }
 }
+#bloc-2 {
+  .insight-item {
+    @media (max-width: 767px){
+      margin-top: -58px;
+    }
+  }
 
-#bloc-2 h3{
-  font-size: 30px;
-  line-height: 40px;
+  h3 {
+    font-size: 30px;
+    line-height: 40px;
+    @media (max-width: 767px){
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
 }
 
 #bloc-3 {
@@ -381,6 +398,21 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     font-weight: 600;
     font-size: 30px;
     line-height: 50px;
+    @media (max-width: 767px){
+      font-size: 18px;
+    }
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 28px;
+    @media (max-width: 767px){
+      font-size: 14px;
+    }
+    a {
+      @media (max-width: 767px){
+        font-size: 12px;
+      }
+    }
   }
   a {
     color: #FF7000;
@@ -389,14 +421,47 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     font-weight: 600;
     font-size: 30px;
     line-height: 40px;
+    @media (max-width: 767px){
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
   }
-  h3 {
-    font-size: 18px;
-    line-height: 28px;
+  .button-wrapper {
+    @media (max-width: 767px){
+      padding: 10px 10px 0;
+    }
+    a {
+      @media (max-width: 767px){
+        font-size: 14px;
+      }
+    }
+  }
+  .interview-list-intro {
+    @media (max-width: 767px){
+      margin-bottom: 54px;
+    }
   }
 }
-#bloc-36 a {
-  color: #fff;
+#bloc-25 {
+  p {
+    @media (max-width: 767px){
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+#bloc-36 {
+  p {
+    text-align: right;
+    @media (max-width: 767px){
+      text-align: left;
+      font-size: 12px;
+    }
+    a {
+      color: #fff;
+    }
+  }
 }
 
 /* = NavBar
