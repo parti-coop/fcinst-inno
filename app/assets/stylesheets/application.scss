@@ -247,24 +247,36 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 /* Bloc text custom styling */
 .interview-header {
   position: relative;
-  text-align: center;
   &--label {
     position: absolute;
     bottom: 0;
     background-color: rgba(132, 75, 197, 0.8);
     width: 100%;
-    padding: 10px;
+    padding: 24px;
     color: #fff;
     &__name {
       font-size: 20px;
       font-weight: bold;
+      margin-bottom: 5px;
     }
   }
 }
+
 .mobile-button-wrapper {
   padding: 10px 25px 0;
   .btn {
     font-size: 14px;
+  }
+}
+.main-page {
+  .btn {
+    border-color: #FF7000;
+    color: #FF7000;
+    &:hover {
+      border-color: #fff;
+      color: #fff;
+    }
+
   }
 }
 #bloc-1 {
@@ -304,9 +316,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   background-position: center;
   background-repeat: no-repeat;
   h2 {
-    @media (max-width: 767px){
-      font-size: 24px;
-    }
+    font-size: 24px;
   }
   #application-header .navbar-brand {
     color: #fff;
@@ -320,7 +330,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       }
 
       p {
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: normal;
       }
 
       .about-process-image {
@@ -383,6 +395,13 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       }
     }
   }
+  .interview-intro {
+    background-color: rgba(7, 0, 32, 0.7);
+  }
+  .interview-summary p {
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
 
 #bloc-10 {
@@ -392,6 +411,10 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
   }
   .interview-message {
+    p {
+      font-size: 18px;
+      line-height: 30px;
+    }
     @media (max-width: 767px){
       margin: 10px 0;
     }
@@ -496,15 +519,30 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     @media (max-width: 767px){
       margin-bottom: 40px;
     }
+    .interview-summary p {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 0;
+      &:hover {
+        color: #FF7000;
+      }
+    }
   }
   .interview-proposals {
+    color: #FF7000;
+    font-size: 18px;
+    line-height: 25px;
     @media (max-width: 767px){
       padding: 0 10px;
     }
-    color: #FF7000;
     &--header {
       margin-bottom: 10px;
-
+      font-size: 18px;
+      line-height: 25px;
+      display: inline-block;
+      &:hover {
+        color: #fff;
+      }
     }
     &--contents {
     }
@@ -513,6 +551,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-weight: bold;
       &:last-child {
         margin-bottom: 10px;
+      }
+      &:hover {
+        color: #fff;
       }
     }
   }
@@ -538,9 +579,6 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
         font-size: 12px;
       }
     }
-  }
-  a {
-    color: #FF7000;
   }
   p {
     font-weight: 600;
@@ -610,10 +648,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   display:inline;
 }
 .navbar .nav{
-  padding-top: 2px;
   margin-right: -16px;
   float:right;
   z-index:1;
+  padding-top: 0;
+  margin-top: -2px;
 }
 .nav > li{
   float:left;
@@ -847,7 +886,7 @@ p{
 }
 .navbar-brand{
   font-weight:600;
-  font-size:14px;
+  font-size:16px;
 }
 h3{
   font-weight:600;
@@ -1120,6 +1159,7 @@ h3{
 
 #application-header {
   a {
+    font-weight: 600;
     &:hover {
       color: #fff;
     }
