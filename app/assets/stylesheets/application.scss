@@ -360,22 +360,31 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 
-#bloc-9 #application-header {
-  a {
-    color: black;
-    &:hover {
-      color: #fff;
-    }
-    &.active {
-      color: #fff;
-    }
+#bloc-9 {
+  &.hide-background-image {
+    background-image: none !important;
   }
-  &.white {
-    a {
-      color: #fff
+
+  #application-header {
+    @media (min-width: 768px){
+      a {
+        color: black;
+        &:hover {
+          color: #fff;
+        }
+        &.active {
+          color: #fff;
+        }
+      }
+      &.white {
+        a {
+          color: #fff
+        }
+      }
     }
   }
 }
+
 #bloc-10 {
   .bloc-lg {
     @media (max-width: 767px){
