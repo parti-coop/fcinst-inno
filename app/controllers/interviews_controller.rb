@@ -1,7 +1,7 @@
 class InterviewsController < ApplicationController
   def index
     reset_meta_tags_for_index
-    @interviews = Interview.all
+    @interviews = Interview.recent
   end
 
   def show

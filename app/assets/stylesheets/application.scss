@@ -245,6 +245,22 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 /* Bloc text custom styling */
+.interview-header {
+  position: relative;
+  text-align: center;
+  &--label {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(132, 75, 197, 0.8);
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    &__name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
 .mobile-button-wrapper {
   padding: 10px 25px 0;
   .btn {
@@ -291,6 +307,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     @media (max-width: 767px){
       font-size: 24px;
     }
+  }
+  #application-header .navbar-brand {
+    color: #fff;
   }
   .about-detail {
     padding: 20px 30px;
@@ -349,6 +368,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
     &.active {
       color: #fff;
+    }
+  }
+  &.white {
+    a {
+      color: #fff
     }
   }
 }
@@ -480,22 +504,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       }
     }
   }
-  .interview-header {
-    position: relative;
-    text-align: center;
-    &--label {
-      position: absolute;
-      bottom: 0;
-      background-color: rgba(132, 75, 197, 0.8);
-      width: 100%;
-      padding: 10px;
-      color: #fff;
-      &__name {
-        font-size: 20px;
-        font-weight: bold;
-      }
-    }
-  }
+
 }
 #bloc-19 {
   h2 {
@@ -1144,6 +1153,15 @@ h3{
         }
       }
 
+      &.icon__orange {
+        a {
+          color: #FF7000;
+          &:hover {
+            color: #070020;
+          }
+        }
+      }
+
       a {
         color: black;
         @media (max-width: 767px){
@@ -1162,6 +1180,12 @@ h3{
       background-image: asset_url('social_icon_kas_black.png');
       &.icon__white {
         background-image: asset_url('social_icon_kas_white.png');
+      }
+      &.icon__orange {
+        background-image: asset_url('social_icon_kas_orange.png');
+        &:hover {
+          background-image: asset_url('social_icon_kas_black.png');
+        }
       }
       &:hover {
         background-image: asset_url('social_icon_kas_orange.png');

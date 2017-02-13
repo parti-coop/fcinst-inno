@@ -11,7 +11,7 @@
           .interview-summary
             = simple_format @interview.summary if @interview.summary.present?
       .voffset
-        = render 'pages/social_share_panel', from: 'interview', interviewee: @interview.name
+        = render 'pages/social_share_panel', from: 'interview', icon_color: 'orange', interviewee: @interview.name
   / bloc-9 END
   / bloc-10
   #bloc-10.bloc.bgc-white.l-bloc
@@ -22,6 +22,8 @@
             = image_tag @interview.image.md.url
           .interview-message
             = simple_format @interview.message if @interview.message.present?
+      .voffset.visible-xs
+        = render 'pages/social_share_panel', from: 'interview', icon_color: 'orange', interviewee: @interview.name
   / bloc-10 END
   / bloc-11
   - if @interview.proposals.any?

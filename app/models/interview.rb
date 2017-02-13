@@ -7,6 +7,8 @@ class Interview < ApplicationRecord
   mount_uploader :image, ImageUploader
   mount_uploader :image_thumbnail, ImageUploader
 
+  scope :recent, -> { order(created_at: :desc) }
+
   def next
     Interview.where("id > ?", self.id).first
   end

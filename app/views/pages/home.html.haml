@@ -112,7 +112,14 @@
         - if Interview.find_by(name: '양준철').present?
           - interview = Interview.find_by(name: '양준철')
           .col-sm-6
-            = image_tag interview.image.lg.url, class: 'img-responsive'
+            .interview-header
+              = image_tag interview.image.lg.url, class: 'img-responsive'
+              .interview-header--label
+                .interview-header--label__name
+                  = interview.name
+                - if interview.organization.present?
+                  .interview-header--label__organization
+                    = interview.organization
             %h3.tc-white.mg-sm
               = interview.summary
               %br/
