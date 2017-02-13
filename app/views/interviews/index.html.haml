@@ -21,7 +21,7 @@
   / bloc-17
   - if @interviews.any?
     #bloc-17.bloc.tc-white.bgc-onyx-2
-      .container.bloc-lg
+      .container.bloc-lg.interview-list-container
         / - abort @interviews.inspect
         - @interviews.each_slice(2) do |interviews_slices|
           .row

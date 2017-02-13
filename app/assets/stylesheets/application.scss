@@ -281,6 +281,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-1 {
+  @media (max-width: 767px){
+    padding: 0 10px;
+  }
   h2 {
     line-height: 40px;
     @media (max-width: 767px){
@@ -296,6 +299,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-2 {
+  @media (max-width: 767px){
+    padding: 0 10px;
+  }
   .insight-item {
     @media (max-width: 767px){
       margin-top: -58px;
@@ -359,8 +365,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-4 {
-  @media (max-width: 767px){
-    text-align: center;
+  .maker-container {
+    @media (max-width: 767px){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 
@@ -438,6 +447,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-11 {
+  .proposals-list-container {
+    @media (max-width: 767px){
+      padding: 40px 15px;
+    }
+  }
   .bloc-lg {
     @media (max-width: 767px){
       padding-bottom: 0;
@@ -460,9 +474,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-size: 20px;
       min-width: 110px;
       @media (max-width: 767px){
-        font-size: 14px;
-        padding: 6px 10px;
-        min-width: 70px;
+        padding: 12px 8px;
         margin-top: 18px;
       }
 
@@ -512,6 +524,8 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     padding-top: 30px;
     @media (max-width: 767px){
       padding-top: 0;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
   .social-share {
@@ -521,12 +535,18 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-17 {
+  .interview-list-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   h3 {
     line-height: 28px;
     color: #fff;
     @media (max-width: 767px){
       font-size: 14px;
       line-height: 24px;
+      margin-left: -10px;
+      margin-right: -10px;
       margin-bottom: 10px;
     }
   }
@@ -544,6 +564,10 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 0;
+      @media (max-width: 767px){
+        font-size: 14px;
+        line-height: 28px;
+      }
     }
   }
   .interview-proposals {
@@ -551,15 +575,23 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     font-size: 18px;
     line-height: 25px;
     @media (max-width: 767px){
-      padding: 0 10px;
     }
     &--header {
       margin-bottom: 10px;
       font-size: 18px;
       line-height: 25px;
       display: inline-block;
+      @media (max-width: 767px){
+        padding: 0 10px;
+        font-size: 14px;
+      }
     }
     &--contents {
+      @media (max-width: 767px){
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+      }
     }
     .interview-proposal {
       margin-bottom: 10px;
@@ -575,6 +607,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 }
 #bloc-19 {
+  @media (max-width: 767px){
+    padding: 0 10px;
+  }
   h2 {
     font-weight: 600;
     font-size: 30px;
@@ -618,6 +653,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   .interview-list-intro {
     @media (max-width: 767px){
       margin-bottom: 54px;
+    }
+  }
+  .interview-body {
+    a {
+      color: #FF7000;
     }
   }
 }
@@ -1021,7 +1061,7 @@ h3{
         overflow-x: hidden;
         position:relative;
     }
-    h1,h2,h3,h4,h5,h6,p,#disqus_thread{
+    h1,h2,h3,h4,h5,h6,p {
         padding-left:10px!important;
         padding-right:10px!important;
     }
@@ -1259,6 +1299,13 @@ h3{
         background-image: asset_url('social_icon_kas_orange.png');
       }
     }
+  }
+}
+
+#disqus_thread {
+  padding: 0 10px;
+  @media (max-width: 767px){
+    padding: 0 20px;
   }
 }
 

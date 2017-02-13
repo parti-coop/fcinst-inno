@@ -29,7 +29,7 @@
   - if @interview.proposals.any?
     %a{class: 'anchor', id: 'anchor-proposals'}
     #bloc-11.bloc.bgc-onyx.d-bloc
-      .container.bloc-lg
+      .container.bloc-lg.proposals-list-container
         .row
           - @interview.proposals.each do |proposal|
             .col-sm-6
