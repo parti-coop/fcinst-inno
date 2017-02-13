@@ -23,11 +23,11 @@
     #bloc-17.bloc.tc-white.bgc-onyx-2
       .container.bloc-lg
         / - abort @interviews.inspect
-        - @interviews.each_slice(3) do |interviews_slices|
+        - @interviews.each_slice(2) do |interviews_slices|
           .row
             - interviews_slices.each do |interview|
               = link_to interview_path(interview) do
-                .col-sm-4.col-xs-12
+                .col-sm-6.col-xs-12
                   .interview-item
                     .interview-header
                       = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
@@ -43,8 +43,7 @@
                       = link_to interview_path(interview, anchor: 'anchor-proposals') do
                         .interview-proposals
                           %p.interview-proposals--header
-                            .ltc-safety-orange-blaze-orange
-                              제안
+                            제안
                             .interview-proposals--contents
                               - interview.proposals.each do |proposal|
                                 .interview-proposal

@@ -501,15 +501,18 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     @media (max-width: 767px){
       padding: 0 10px;
     }
+    color: #FF7000;
     &--header {
-      margin-bottom: 0;
+      margin-bottom: 10px;
+
     }
     &--contents {
-      color: #FF7000;
     }
     .interview-proposal {
-      &:after {
-        content: '>'
+      margin-bottom: 10px;
+      font-weight: bold;
+      &:last-child {
+        margin-bottom: 10px;
       }
     }
   }

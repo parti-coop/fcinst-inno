@@ -113,7 +113,7 @@
           - interview = Interview.find_by(name: '양준철')
           .col-sm-6
             .interview-header
-              = image_tag interview.image.lg.url, class: 'img-responsive'
+              = image_tag interview.image_thumbnail.lg.url, class: 'img-responsive'
               .interview-header--label
                 .interview-header--label__name
                   = interview.name
@@ -124,7 +124,7 @@
               = interview.summary
               %br/
               %br
-              = link_to interview_path(Interview.first) do
+              = link_to interview_path(interview) do
                 %u #{interview.name}님의 제안 더보기
 / Footer - bloc-19 END
 
