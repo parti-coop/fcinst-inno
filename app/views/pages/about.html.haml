@@ -1,6 +1,6 @@
 .page-container
   / bloc-3
-  #bloc-3.bloc.tc-white.bgc-white.l-bloc{style: "background-image: url(#{asset_url('about_background.jpg')});", class: "#{'bloc-fill-screen' unless browser.device.mobile?}"}
+  #bloc-3.bloc.bgc-onyx.d-bloc{style: "background-image: url(#{asset_url('about_background.jpg')});", class: "#{'bloc-fill-screen' unless browser.device.mobile?} #{'hide-background-image' if browser.device.mobile?}"}
     = render 'application/header'
     .container
       .row.hidden-sm.hidden-xs.object-hidden

@@ -31,7 +31,7 @@
                   = image_tag 'social_icon_kas_white.png', class: 'social-icon--kas'
                 - if provider == 'kakao-link'
                   = image_tag 'social_icon_kakao_white.png', class: 'social-icon--kakao'
-            - if icon_color == 'orange'
+            - elsif icon_color == 'orange'
               .jssocials-share
                 - if provider == 'kakao-story'
                   = image_tag 'social_icon_kas_orange.png', class: 'social-icon--kas'
