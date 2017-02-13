@@ -19,7 +19,7 @@
       = image_tag f.object.image_thumbnail.xs.url
   .form-group
     = f.label :message
-    ~ f.text_area :message, class: 'form-control'
+    ~ f.text_area :message, class: 'form-control redactor'
   .form-group
     = f.label :summary
     ~ f.text_area :summary, class: 'form-control'

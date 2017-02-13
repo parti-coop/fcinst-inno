@@ -23,6 +23,9 @@ gem 'unobtrusive_flash', '~> 3.2'
 gem 'slack-notifier', '~> 1.4'
 gem 'exception_notification', '~> 4.1', '>= 4.1.4'
 
+#tool
+gem 'redactor2_rails', '~> 0.1.1'
+
 #util
 gem 'envyable', '~> 0.2.0'
 gem 'ruby_dig', '~> 0.0.2'

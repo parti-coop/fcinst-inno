@@ -7,6 +7,7 @@
 //= require jquery.youtubebackground
 //= require unobtrusive_flash
 //= require unobtrusive_flash_bootstrap
+//= require redactor
 
 Kakao.init('929bb882ab44bacf4c2c27a9de2156c6');
 
@@ -101,4 +102,15 @@ $(function(){
   s.src = '//innovators-1.disqus.com/embed.js';
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
+
+  // Initialize Redactor
+  $('.redactor').redactor({
+    buttons: ['format', 'bold', 'italic', 'deleted', 'underline', 'lists', 'horizontalrule'],
+    pasteLinks: false,
+    callbacks: {
+      imageUploadError: function(json, xhr) {
+        UnobtrusiveFlash.showFlashMessage(json.error.data[0], {type: 'notice'})
+      }
+    }
+  });
 });

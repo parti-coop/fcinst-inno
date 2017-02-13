@@ -38,7 +38,7 @@
                           .interview-header--label__organization
                             = interview.organization
                     %h3.mg-md
-                      = interview.summary
+                      = simple_format interview.summary
                     - if interview.proposals.any?
                       = link_to interview_path(interview, anchor: 'anchor-proposals') do
                         .interview-proposals
