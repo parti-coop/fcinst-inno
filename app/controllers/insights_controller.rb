@@ -3,6 +3,10 @@ class InsightsController < ApplicationController
     reset_meta_tags_for_index
   end
 
+  def show
+    reset_meta_tags_for_index
+  end
+
   private
 
   def reset_meta_tags_for_index
