@@ -1,6 +1,6 @@
 .page-container
   / bloc-9
-  #bloc-9.bloc.bgc-safety-orange-blaze-orange.d-bloc{ style: "background-image: url(#{image_url(@interview.image.lg.url)})", class: "#{'bloc-fill-screen' unless browser.device.mobile?}"}
+  #bloc-9.bloc.bgc-safety-orange-blaze-orange.d-bloc{ style: "background-image: url(#{image_url(@interview.image.xl.url)})", class: "#{'bloc-fill-screen' unless browser.device.mobile?}"}
     = render 'application/header'
     .container.fill-bloc-bottom-edge.hidden-xs
       .row.voffset-lg.bgc-onyx
@@ -32,7 +32,7 @@
           - @interview.proposals.each do |proposal|
             .col-sm-6
               .proposal-item[proposal]
-                = image_tag proposal.image.md.url, class: 'img-responsive', width: '100%'
+                = image_tag proposal.image.lg.url, class: 'img-responsive', width: '100%'
                 .js-upvote
                   = render 'upvotes/button', proposal: proposal
 

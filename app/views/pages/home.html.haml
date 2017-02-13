@@ -109,17 +109,16 @@
               %br
             .button-wrapper
               = link_to '6명의 인터뷰 더 보기', interviews_path, class: 'btn btn-wire btn-lg device-bloc-button btn-sq wire-btn-safety-orange-blaze-orange'
-
-        .col-sm-6
-          = image_tag "interview_landit_thumb.png", class: 'img-responsive'
-          %h3.tc-white.mg-sm
-            " 신융합 산업은 기존의 규제 방식을 그대로 고수해서는 절대로 수용될 수 없습니다.
-            %br
-            새로 태어난 영역이기 때문에 본질적으로 기존 산업들과 많은 차이점을 갖고 있기 때문입니다. "
-            %br/
-            %br
-            = link_to interview_path(Interview.first) do
-              %u 김성준님의 제안 더보기
+        - if Interview.find_by(name: '양준철').present?
+          - interview = Interview.find_by(name: '양준철')
+          .col-sm-6
+            = image_tag interview.image.lg.url, class: 'img-responsive'
+            %h3.tc-white.mg-sm
+              = interview.summary
+              %br/
+              %br
+              = link_to interview_path(Interview.first) do
+                %u #{interview.name}님의 제안 더보기
 / Footer - bloc-19 END
 
 / Main container END
