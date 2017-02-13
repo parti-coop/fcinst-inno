@@ -1,0 +1,13 @@
+= render 'admin/base/header'
+.container
+  %h1.page-header #{Insight.model_name.human} 관리
+  %p
+    = link_to '인사이트 만들기', new_admin_insight_path, class: 'btn btn-primary'
+  %hr
+  - if @insights.any?
+    %ul
+      - @insights.each do |insight|
+        %li
+          = link_to admin_insight_path(insight) do
+            = insight.title
+

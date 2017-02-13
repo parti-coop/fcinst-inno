@@ -2,7 +2,7 @@
 .container
   %h1.page-header #{Interview.model_name.human} 관리
   %p
-    = link_to '인터뷰만들기', new_admin_interview_path, class: 'btn btn-primary'
+    = link_to '인터뷰 만들기', new_admin_interview_path, class: 'btn btn-primary'
   %hr
   - if @interviews.any?
     %ul

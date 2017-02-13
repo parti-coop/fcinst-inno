@@ -5,6 +5,7 @@ class InsightsController < ApplicationController
 
   def show
     reset_meta_tags_for_index
+    @insight = Insight.find(params[:id])
   end
 
   private

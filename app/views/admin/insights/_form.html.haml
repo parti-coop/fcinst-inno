@@ -1,0 +1,11 @@
+= form_for [:admin, @insight] do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :body
+    ~ f.text_area :body, class: 'form-control redactor'
+
+  = f.submit '저장', data: { disable_with: "진행 중..." }, class: 'btn btn-sm btn-primary'
+  - if @insight.persisted?
+    = link_to '삭제', [:admin, @insight], method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: "정말 삭제하시겠습니까?" }
