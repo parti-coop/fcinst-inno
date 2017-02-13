@@ -322,6 +322,10 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   #application-header .navbar-brand {
     color: #fff;
   }
+  .fill-bloc-bottom-edge {
+    bottom: 0;
+    margin-bottom: 0;
+  }
   .about-detail {
     padding: 20px 30px;
     &--content {
@@ -371,6 +375,10 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       padding: 10px;
     }
   }
+  .fill-bloc-bottom-edge {
+    bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 #bloc-9 {
@@ -396,12 +404,19 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       }
     }
   }
+  .fill-bloc-bottom-edge {
+    bottom: 0;
+    margin-bottom: 0;
+  }
   .interview-intro {
     background-color: rgba(7, 0, 32, 0.7);
   }
   .interview-summary p {
     font-size: 24px;
     line-height: 40px;
+  }
+  .voffset {
+    margin-top: 20px;
   }
 }
 
@@ -457,6 +472,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
         color: #fff;
         cursor: default;
       }
+      &:hover {
+        border-color: #fff;
+        background-color: #ff7000;
+        color: #fff;
+      }
     }
   }
 }
@@ -468,7 +488,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-16 {
-  padding: 20px 0 20px;
+  padding: 20px 0 0;
   @media (max-width: 767px){
     padding: 0;
   }
@@ -524,9 +544,6 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 0;
-      &:hover {
-        color: #FF7000;
-      }
     }
   }
   .interview-proposals {
@@ -541,15 +558,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-size: 18px;
       line-height: 25px;
       display: inline-block;
-      &:hover {
-        color: #fff;
-      }
     }
     &--contents {
     }
     .interview-proposal {
       margin-bottom: 10px;
-      font-weight: bold;
+      text-decoration: underline;
       &:last-child {
         margin-bottom: 10px;
       }
@@ -1172,10 +1186,11 @@ h3{
 
 .social-share {
   text-align: center;
-  padding-top: 18px;
+  padding-top: 0;
+  margin-top: -10px;
   @media (max-width: 767px){
     font-size: 30px;
-    padding-top: 0;
+    margin-top: 0;
   }
 
   .jssocials-share {
