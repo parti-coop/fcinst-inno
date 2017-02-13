@@ -19,7 +19,7 @@
       .row
         .col-sm-12
           .interview-image.visible-xs
-            = image_tag @interview.image.md.url
+            = image_tag upload_file_exists?(@interview.image_mobile) ? @interview.image_mobile.md.url : @interview.image.md.url
           .interview-message
             = simple_format @interview.message if @interview.message.present?
       .voffset.visible-xs

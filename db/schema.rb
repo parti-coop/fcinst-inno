@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210141141) do
+ActiveRecord::Schema.define(version: 20170213031639) do
 
   create_table "interviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name",                          null: false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170210141141) do
     t.datetime "updated_at",                    null: false
     t.text     "summary",         limit: 65535
     t.string   "image_thumbnail"
+    t.string   "image_mobile"
   end
 
   create_table "proposals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC" do |t|

@@ -5,6 +5,7 @@ class Interview < ApplicationRecord
   validates :summary, presence: true
 
   mount_uploader :image, ImageUploader
+  mount_uploader :image_mobile, ImageUploader
   mount_uploader :image_thumbnail, ImageUploader
 
   scope :recent, -> { order(created_at: :desc) }

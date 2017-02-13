@@ -48,7 +48,7 @@ module Admin
     private
 
     def interview_params
-      params.require(:interview).permit(:name, :organization, :image, :image_thumbnail, :message, :summary)
+      params.require(:interview).permit(:name, :organization, :image, :image_mobile, :image_thumbnail, :message, :summary)
     end
 
     def get_or_build_proposals
