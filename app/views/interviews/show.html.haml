@@ -8,7 +8,7 @@
           %h3.mg-md
             #{@interview.name},
             = @interview.organization if @interview.organization.present?
-          .interview-summary
+          .interview-summary__web
             = simple_format @interview.summary if @interview.summary.present?
       .voffset
         = render 'pages/social_share_panel', from: 'interview', icon_color: 'orange', interviewee: @interview.name
@@ -18,8 +18,12 @@
     .container.bloc-lg
       .row
         .col-sm-12
-          .interview-image.visible-xs
-            = image_tag upload_file_exists?(@interview.image_mobile) ? @interview.image_mobile.md.url : @interview.image.md.url
+          .interview-summary__mobile.visible-xs{ style: "background-image: url(#{image_url(@interview.image_mobile.lg.url)})" }
+            .interview-summary__mobile--contents
+              %p
+                #{@interview.name},
+                = @interview.organization if @interview.organization.present?
+              = simple_format @interview.summary if @interview.summary.present?
           .interview-message
             = simple_format @interview.message if @interview.message.present?
       .voffset.visible-xs

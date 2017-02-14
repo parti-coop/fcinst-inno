@@ -482,7 +482,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   .interview-intro {
     background-color: rgba(7, 0, 32, 0.7);
   }
-  .interview-summary p {
+  .interview-summary__web p {
     font-size: 24px;
     line-height: 40px;
   }
@@ -492,6 +492,22 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-10 {
+  .interview-summary__mobile {
+    // box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.6);
+    color: #fff;
+    min-height: 460px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 5px;
+    position: relative;
+    &--contents {
+      position: absolute;
+      bottom: 30px;
+    }
+    p {
+    }
+  }
   .bloc-lg {
     @media (max-width: 767px){
       padding: 0;
