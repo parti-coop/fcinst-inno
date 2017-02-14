@@ -395,7 +395,8 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
   }
   h2 {
-    font-size: 24px;
+    font-size: 18px;
+    line-height: 28px;
   }
   #application-header .navbar-brand {
     color: #fff;
@@ -417,8 +418,8 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       }
 
       p {
-        font-size: 18px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 28px;
         font-weight: normal;
       }
 
