@@ -358,6 +358,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     padding: 0 10px;
   }
   .insight-item {
+    color: #fff;
     @media (max-width: 767px){
       margin-top: -58px;
     }
@@ -444,6 +445,14 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     @media (max-width: 767px){
       margin: 20px 5px 0;
     }
+    @media (min-width: 768px){
+      width: 700px;
+      margin: auto;
+    }
+    .insight-body p {
+      font-size: 16px;
+      line-height: 32px;
+    }
   }
   .social-share {
     @media (max-width: 767px){
@@ -515,8 +524,8 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
   .interview-message {
     p {
-      font-size: 18px;
-      line-height: 30px;
+      font-size: 16px;
+      line-height: 32px;
     }
     @media (min-width: 768px){
       width: 700px;

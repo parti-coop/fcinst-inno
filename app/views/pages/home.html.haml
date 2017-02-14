@@ -66,43 +66,30 @@
             인사이트를 공유합니다.
             %br
 
-          = link_to '인사이트 보고 의견 남기기', insights_path, class: 'btn btn-lg btn-wire btn-sq hidden-xs'
+          = link_to '인사이트 보고 의견 남기기', insight_path(1), class: 'btn btn-lg btn-wire btn-sq hidden-xs'
         .col-sm-6
-          .insight-item
-            %p
+          = link_to insight_path(1) do
+            .insight-item
+              %p
 
-              %br
+                %br
 
-              %br
+                %br
 
-              %br
-              %u 사회적기업 FGI
-              &nbsp; &nbsp;&nbsp;
-              %br
+                %br
+                %u 사회적기업 FGI
+                &nbsp; &nbsp;&nbsp;
+                %br
 
-              %br
-              OFA is committed to mobilizing and training
-              %br
-              the next generation of progressive organizers and leaders,
-              %br
-              because real, lasting change doesn&rsquo;t just happen on its own—
-              %br
-              it requires a program, it requires organizing,
-              %br
-              and it requires people like you.
-              %br
-
-              %br
-              With grassroots chapters in neighborhoods across the country,
-              %br
-              OFA volunteers are building this movement from the ground up,
-              %br
-              person to person, community by community—
-              %br
-              because democracy isn&rsquo;t a spectator sport.&nbsp;
-              %br
+                %br
+                우리 사회가 건강해지기 위해 꼭 필요한 일들을 업으로 삼아 해내는 분들을 인터뷰에 초대해 이야기를 나누었습니다.
+                %br
+                앞장 서서 혁신의 편에 서다보면 고단해지는 순간들도 많지만, 바로 그런 순간들이 혁신의 편에 서기 위해 필요한 것들에 대해 더 정확하고 세밀하게 이야기할 수 있게 합니다.
+                %br
+                한숨과 웃음으로 치뤄 낸 무수한 전투의 경험이 오갔던 인터뷰, 그 안에서 발견한 귀중한 인사이트를 혁신의 편에 서려는 더 많은 이들과 나눠보려 합니다.
+                %br
         .mobile-button-wrapper.visible-xs
-          = link_to '인사이트 보고 의견 남기기', insights_path, class: 'btn btn-lg btn-wire btn-sq'
+          = link_to '인사이트 보고 의견 남기기', insight_path(1), class: 'btn btn-lg btn-wire btn-sq'
 
   / bloc-2 END
 
