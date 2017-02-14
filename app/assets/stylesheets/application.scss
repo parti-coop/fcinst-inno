@@ -309,14 +309,15 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   .mobile-main-slides {
     z-index: -10;
   }
+  .slogan__web--conatainer {
+    top: 70%;
+  }
   .slogan__web {
     position: absolute;
-    bottom: 50px;
     background-color: #070020;
     padding: 30px;
     font-size: 30px;
     width: 500px;
-    margin: 0 140px;
     &--sub {
       font-size: 16px;
     }
@@ -457,9 +458,24 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       width: 700px;
       margin: auto;
     }
-    .insight-body p {
-      font-size: 16px;
-      line-height: 32px;
+    .insight-title {
+      margin-bottom: 50px;
+      font-size: 24px;
+      font-weight: 900;
+      @media (max-width: 767px){
+        margin: 40px 0 20px;
+      }
+    }
+    .insight-body {
+      h2 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: normal;
+      }
     }
   }
   .social-share {
@@ -534,7 +550,13 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     color: #070020;
     p {
       font-size: 16px;
-      line-height: 32px;
+      line-height: 28px;
+      color: #000;
+      font-weight: normal;
+    }
+    h2 {
+      font-size: 18px;
+      line-height: 28px;
     }
     @media (min-width: 768px){
       width: 700px;
@@ -542,7 +564,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     }
 
     @media (max-width: 767px){
-      margin: 10px 0;
+      padding: 6px 10px;
     }
   }
 }
