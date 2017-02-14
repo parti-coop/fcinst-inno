@@ -21,8 +21,9 @@
           .interview-summary__mobile.visible-xs{ style: "background-image: url(#{image_url(@interview.image_mobile.lg.url)})" }
             .interview-summary__mobile--contents
               %p
-                #{@interview.name},
-                = @interview.organization if @interview.organization.present?
+                %strong
+                  #{@interview.name},
+                  = @interview.organization if @interview.organization.present?
               = simple_format @interview.summary if @interview.summary.present?
           .interview-message
             = simple_format @interview.message if @interview.message.present?

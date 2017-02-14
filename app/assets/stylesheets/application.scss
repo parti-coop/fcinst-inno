@@ -363,8 +363,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
   .insight-item {
     color: #fff;
+    margin-top: 90px;
     @media (max-width: 767px){
-      margin-top: -58px;
+      margin-top: 0;
     }
   }
 
@@ -539,6 +540,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       bottom: 30px;
     }
     p {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: normal;
     }
   }
   .bloc-lg {
@@ -708,7 +712,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 0;
+      font-weight: normal;
       @media (max-width: 767px){
+        font-weight: bold;
         font-size: 14px;
         line-height: 28px;
       }
