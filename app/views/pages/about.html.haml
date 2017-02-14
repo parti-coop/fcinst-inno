@@ -55,10 +55,11 @@
                 \- 정책제안 발표 및 캠페인
                 %br
                 \- 정부 정책, 정당 정책, 선거 공약, 헌법과 법률 개정안 등에 반영
-              - if browser.device.mobile?
-                = image_tag 'about_process_mobile.png', class: 'about-process-image'
-              - else
-                = image_tag 'about_process_web.png', class: 'about-process-image'
+              .about-process-image-wrapper
+                - if browser.device.mobile?
+                  = image_tag 'about_process_mobile.png', class: 'about-process-image'
+                - else
+                  = image_tag 'about_process_web.png', class: 'about-process-image'
 
       .voffset
         = render 'pages/social_share_panel', from: 'about'
