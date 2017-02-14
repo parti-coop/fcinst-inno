@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     title = options[:title] || "당신은 혁신의 편입니까?"
     image = options[:image] || view_context.image_url('seo.png')
     url = options[:url] || root_url
-    description = options[:description] || "혁신을 키우기 위한 정책 제안 프로젝트"
+    description = options[:description] || "혁신가들에게 묻고 전문가들에게 도움받아 새로운 사회시스템을 위한 정책을 만듭니다."
 
     {
       title:       title,
