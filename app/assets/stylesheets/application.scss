@@ -315,15 +315,21 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     width: 500px;
     margin: 0 140px;
     &--sub {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
   .slogan__mobile {
     position: absolute;
-    bottom: 0;
-    margin: 24px 30px;
+    bottom: 30px;
+    margin: 24px auto;
     font-size: 24px;
     font-weight: 900;
+    background-color: #070020;
+    padding: 20px;
+    width: 100%;
+    &--sub {
+      font-size: 18px;
+    }
   }
   @media (max-width: 767px){
     height: inherit !important;
