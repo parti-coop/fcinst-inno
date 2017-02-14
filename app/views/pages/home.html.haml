@@ -129,7 +129,8 @@
           - interview = Interview.find_by(name: '양준철')
           .col-sm-6
             .interview-header
-              = image_tag interview.image_thumbnail.lg.url, class: 'img-responsive'
+              = link_to interview_path(interview) do
+                = image_tag interview.image_thumbnail.lg.url, class: 'img-responsive'
               .interview-header--label
                 .interview-header--label__name
                   = interview.name
@@ -140,8 +141,10 @@
               = interview.summary
               %br/
               %br
-              = link_to interview_path(interview) do
+              = link_to interview_path(interview), class: 'hidden-xs' do
                 %u #{interview.name}님의 제안 더보기
+              = link_to interviews_path, class: 'visible-xs' do
+                %u #{Interview.count}개의 인터뷰 더보기
 / Footer - bloc-19 END
 
 / Main container END
