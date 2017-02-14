@@ -386,7 +386,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   #application-header {
     @media (min-width: 768px){
       a {
-        color: #fff
+        color: rgba(255, 255, 255, 0.6);
+        &.active,
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }
@@ -1365,6 +1369,7 @@ h3{
 
 #application-header {
   a {
+    color: rgba(255, 255, 255, 0.6);
     font-weight: 600;
     &:hover {
       color: #fff;
