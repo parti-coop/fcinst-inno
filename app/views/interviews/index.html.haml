@@ -28,26 +28,8 @@
             - interviews_slices.each do |interview|
               = link_to interview_path(interview) do
                 .col-sm-6.col-xs-12
-                  .interview-item
-                    .interview-header
-                      = image_tag interview.image_thumbnail.md.url, class: 'img-responsive'
-                      .interview-header--label
-                        .interview-header--label__name
-                          = interview.name
-                        - if interview.organization.present?
-                          .interview-header--label__organization
-                            = interview.organization
-                    %h3.mg-md.interview-summary
-                      = simple_format interview.summary
-                    - if interview.proposals.any?
-                      = link_to interview_path(interview, anchor: 'anchor-proposals') do
-                        .interview-proposals
-                          %p.interview-proposals--header
-                            제안
-                            .interview-proposals--contents
-                              - interview.proposals.each do |proposal|
-                                .interview-proposal
-                                  = proposal.title
+                  = render 'interview_card', interview: interview
+
 
 
   / bloc-17 END

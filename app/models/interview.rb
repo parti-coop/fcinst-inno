@@ -10,11 +10,15 @@ class Interview < ApplicationRecord
 
   scope :recent, -> { order(created_at: :desc) }
 
+  def find_others
+    Interview.where("id = ?", self.id)
+  end
+
   def next
-    Interview.where("id > ?", self.id).first
+    Interview.where("id > ?", self.id).any? ? Interview.where("id > ?", self.id).first : self.find_others.first
   end
 
   def prev
-    Interview.where("id < ?", self.id).last
+    Interview.where("id < ?", self.id).any? ? Interview.where("id < ?", self.id).last : self.find_others.last
   end
 end

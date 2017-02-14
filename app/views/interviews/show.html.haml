@@ -51,19 +51,20 @@
   / Bloc Group
   .bloc-group
     / bloc-13
-    #bloc-13.bloc.bloc-tile-2.bgc-white.l-bloc
-      .container.bloc-sm
+    #bloc-13.bloc.bloc-tile-2.bgc-onyx.l-bloc
+      .container.bloc-sm.other-interviews-container
+        %h3 다른 인터뷰
         .row
           .col-sm-6.col-xs-6
             - if @interview.prev.present?
-              %h3.mg-md
-                = link_to interview_path(@interview.prev), class: 'tc-safety-orange-blaze-orange' do
-                  \&lt; 이전 인터뷰 보기
+              = link_to interview_path(@interview.prev) do
+                .other-interview
+                  = render 'interview_card', interview: @interview.prev, from: 'interview_show'
           .col-sm-6.col-xs-6
             - if @interview.next.present?
-              %h3.mg-md.text-right
-                = link_to interview_path(@interview.next), class: 'tc-safety-orange-blaze-orange' do
-                  다음 인터뷰 보기 &gt;
+              = link_to interview_path(@interview.next) do
+                .other-interview
+                  = render 'interview_card', interview: @interview.next, from: 'interview_show'
     / bloc-13 END
   / Bloc Group END
 / Main container END
