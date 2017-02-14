@@ -8,6 +8,7 @@
 //= require unobtrusive_flash
 //= require unobtrusive_flash_bootstrap
 //= require redactor
+//= require owl.carousel
 
 Kakao.init('929bb882ab44bacf4c2c27a9de2156c6');
 
@@ -85,7 +86,7 @@ $(function(){
   inno_prepare($('body'));
   $('#video-background').YTPlayer({
       fitToBackground: true,
-      videoId: 'lkswzF9jA5w'
+      videoId: 'fD1ReY_HqNM'
   });
 
   /**
@@ -113,4 +114,17 @@ $(function(){
       }
     }
   });
+
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    center: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplaySpeed: 1000,
+    touchDrag: false,
+    mouseDrag: false,
+    pullDrag: false
+  });
+
 });

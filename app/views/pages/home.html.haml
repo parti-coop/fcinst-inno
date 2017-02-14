@@ -2,7 +2,19 @@
   / bloc-0
   #bloc-0.bloc.bloc-fill-screen.lake-hero-bloc.d-bloc
     = render 'application/header'
-    #video-background
+    #video-background.hidden-xs
+    .mobile-main-slides.owl-carousel.owl-theme.visible-xs
+      %div
+        = image_tag 'mobie_main_1.png'
+      %div
+        = image_tag 'mobie_main_2.png'
+      %div
+        = image_tag 'mobie_main_3.png'
+      %div
+        = image_tag 'mobie_main_4.png'
+    .mobile-slide-text.visible-xs
+      당신은 혁신의 편입니까?
+
   / bloc-0 END
   / bloc-1
   #bloc-1.bloc.tc-white.bgc-onyx

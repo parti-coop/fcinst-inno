@@ -1,7 +1,7 @@
 .container.fill-bloc-top-edge#application-header
   %nav.navbar.row
     .navbar-header
-      = link_to '당신은 혁신의 편입니까?', root_path, class: 'navbar-brand'
+      = link_to '당신은 혁신의 편입니까?', root_path, class: "navbar-brand #{' ' if current_page?(controller: '/pages', action: :home)}"
       %button#nav-toggle.ui-navbar-toggle.navbar-toggle{"data-target" => ".navbar-1", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
         %span.icon-bar

@@ -3,6 +3,7 @@
 @import "jssocials";
 @import url(//cdn.jsdelivr.net/nanumsquare/1.0/nanumsquare.css);
 @import "redactor";
+@import "owl.carousel";
 
 body{
   margin:0;
@@ -278,6 +279,21 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       color: #fff;
     }
 
+  }
+}
+#bloc-0 {
+  .mobile-main-slides {
+    z-index: -10;
+  }
+  .mobile-slide-text {
+    position: absolute;
+    bottom: 0;
+    margin: 24px 30px;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  @media (max-width: 767px){
+    height: inherit !important;
   }
 }
 #bloc-1 {
