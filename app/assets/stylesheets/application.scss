@@ -389,9 +389,13 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     margin-bottom: 0;
   }
   .about-detail {
-    padding: 20px 30px;
+    padding: 40px 30px 20px;
     &--content {
       margin-bottom: 40px;
+      @media (min-width: 768px){
+        width: 700px;
+        margin: auto;
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -492,6 +496,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-size: 18px;
       line-height: 30px;
     }
+    @media (min-width: 768px){
+      width: 700px;
+      margin: auto;
+    }
+
     @media (max-width: 767px){
       margin: 10px 0;
     }
