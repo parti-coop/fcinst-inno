@@ -33,6 +33,10 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   transform: none;
   @media (max-width: 767px){
     margin: auto;
+    position: inherit;
+    &.turn_abosolute {
+      position: absolute;
+    }
   }
   a {
     color: rgba(255, 255, 255, 0.6);
@@ -437,6 +441,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
   .about-detail-container {
     margin-top: 160px;
+    @media (max-width: 767px){
+      margin-top: 0;
+    }
   }
   .about-detail {
     padding: 40px 30px 20px;
@@ -494,6 +501,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
   .insight-item-container {
     margin-top: 160px;
+    @media (max-width: 767px){
+      margin-top: 0;
+    }
   }
   .insight-item {
     @media (max-width: 767px){
@@ -723,6 +733,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
   .interview-header-container {
     margin-top: 78px;
+    @media (max-width: 767px){
+      margin-top: 10px;
+    }
   }
   .interview-header {
     padding-top: 30px;
