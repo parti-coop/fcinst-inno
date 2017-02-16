@@ -336,6 +336,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   @media (min-width: 768px){
     height: 652px;
   }
+  .site-navigation {
+    @media (max-width: 767px){
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
   .mobile-main-slides {
     z-index: -10;
   }
