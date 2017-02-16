@@ -98,11 +98,12 @@ $(function(){
   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   };
   */
-
-  var d = document, s = d.createElement('script');
-  s.src = '//innovators-1.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
+  if ($('#disqus_thread').length > 0) {
+    var d = document, s = d.createElement('script');
+    s.src = '//innovators-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
 
   // Initialize Redactor
   $('.redactor').redactor({
