@@ -120,7 +120,7 @@ $(function(){
     center: true,
     loop: true,
     autoplay: true,
-    autoplayTimeout: 2000,
+    autoplayTimeout: 2500,
     autoplaySpeed: 1000,
     touchDrag: false,
     mouseDrag: false,
