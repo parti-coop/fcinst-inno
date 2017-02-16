@@ -1,16 +1,17 @@
 - if @insight.present?
   .page-container
     / bloc-6
-    #bloc-6.bloc.bgc-blue-pigment.d-bloc{:class => "bg-gradation-background #{'bloc-fill-screen' unless browser.device.mobile?} "}
+    #bloc-6.bloc.bgc-blue-pigment.d-bloc
       = render 'application/header'
       .container
-        .row
-          .col-sm-12
-            .insight-item
-              %h1.mg-md.insight-title
-                = @insight.title
-              .insight-body
-                = simple_format @insight.body
+        .insight-item-container
+          .row
+            .col-sm-12
+              .insight-item
+                %h1.mg-md.insight-title
+                  = @insight.title
+                .insight-body
+                  = simple_format @insight.body
       .container.fill-bloc-bottom-edge
         = render 'pages/social_share_panel', from: 'insights_list', icon_color: 'white'
     / bloc-6 END

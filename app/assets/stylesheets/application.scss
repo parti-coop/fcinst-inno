@@ -24,6 +24,29 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 #page-loading-blocs-notifaction{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF asset_url("pageload-spinner.gif") no-repeat center center;}
 
+.application-header {
+  position: absolute;
+  margin: 20px auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: none;
+  @media (max-width: 767px){
+    margin: auto;
+  }
+  a {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    &:hover {
+      color: #fff;
+    }
+    &.active {
+      color: #fff;
+    }
+  }
+}
+
+
 .player-wrapper {
   width: 100%;
   margin: auto auto 20px;
@@ -306,6 +329,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-0 {
+  @media (min-width: 768px){
+    height: 652px;
+  }
   .mobile-main-slides {
     z-index: -10;
   }
@@ -318,6 +344,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     padding: 30px;
     font-size: 30px;
     width: 500px;
+    bottom: 70px;
     &--sub {
       font-size: 16px;
     }
@@ -380,10 +407,13 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-3 {
+  @media (min-width: 768px){
+    height: 1960px;
+  }
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  #application-header {
+  .application-header {
     @media (min-width: 768px){
       a {
         color: rgba(255, 255, 255, 0.6);
@@ -398,12 +428,15 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
     font-size: 18px;
     line-height: 28px;
   }
-  #application-header .navbar-brand {
+  .application-header .navbar-brand {
     color: #fff;
   }
   .fill-bloc-bottom-edge {
     bottom: 0;
     margin-bottom: 0;
+  }
+  .about-detail-container {
+    margin-top: 160px;
   }
   .about-detail {
     padding: 40px 30px 20px;
@@ -456,6 +489,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-6 {
+  @media (min-width: 768px){
+    height: 2592px;
+  }
+  .insight-item-container {
+    margin-top: 160px;
+  }
   .insight-item {
     @media (max-width: 767px){
       margin: 20px 5px 0;
@@ -496,7 +535,10 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 #bloc-9 {
-  #application-header {
+  @media (min-width: 768px){
+    height: 660px;
+  }
+  .application-header {
     @media (min-width: 768px){
       a {
         color: black;
@@ -517,6 +559,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   .fill-bloc-bottom-edge {
     bottom: 0;
     margin-bottom: 0;
+  }
+  .interview-intro-container {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
   }
   .interview-intro {
     background-color: rgba(7, 0, 32, 0.7);
@@ -653,7 +701,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-16 {
-  padding: 20px 0 0;
+  padding: 1px 0 0;
   @media (max-width: 767px){
     padding: 0;
   }
@@ -672,6 +720,9 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       font-size: 18px;
       line-height: 30px;
     }
+  }
+  .interview-header-container {
+    margin-top: 78px;
   }
   .interview-header {
     padding-top: 30px;
@@ -1367,19 +1418,6 @@ h3{
   background-size:1550px auto;
 }
  }
-
-#application-header {
-  a {
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 600;
-    &:hover {
-      color: #fff;
-    }
-    &.active {
-      color: #fff;
-    }
-  }
-}
 
 .social-share {
   text-align: center;

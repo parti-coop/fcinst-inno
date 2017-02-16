@@ -1,11 +1,11 @@
 .page-container
   / bloc-3
-  #bloc-3.bloc.bgc-onyx.d-bloc{style: "background-image: url(#{asset_url('about_background.jpg')});", class: "#{'bloc-fill-screen' unless browser.device.mobile?} #{'hide-background-image' if browser.device.mobile?}"}
+  #bloc-3.bloc.bgc-onyx.d-bloc{style: "background-image: url(#{asset_url('about_background.jpg')});", class: " #{'hide-background-image' if browser.device.mobile?}"}
     = render 'application/header'
     .container
       .row.hidden-sm.hidden-xs.object-hidden
         .col-sm-12
-    .container.fill-bloc-bottom-edge
+    .container.about-detail-container
       .row.bgc-onyx
         .col-sm-12.about-detail
           .about-detail--content

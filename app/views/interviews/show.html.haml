@@ -1,8 +1,8 @@
 .page-container
   / bloc-9
-  #bloc-9.bloc.bgc-onyx.d-bloc{ style: "background-image: url(#{image_url(@interview.image.xl.url)})", class: "#{'bloc-fill-screen' unless browser.device.mobile?} #{'hide-background-image' if browser.device.mobile?}"}
+  #bloc-9.bloc.bgc-onyx.d-bloc{ style: "background-image: url(#{image_url(@interview.image.xl.url)})", class: " #{'hide-background-image' if browser.device.mobile?}"}
     = render 'application/header'
-    .container.fill-bloc-bottom-edge.hidden-xs
+    .container.interview-intro-container.hidden-xs
       .row.voffset-lg.interview-intro
         .col-sm-12
           %h3.mg-md
