@@ -104,8 +104,8 @@
               %br
             .button-wrapper.hidden-xs
               = link_to "#{Interview.count}명의 인터뷰 더보기", interviews_path, class: 'btn btn-wire btn-lg device-bloc-button btn-sq'
-        - if Interview.find_by(name: '양준철').present?
-          - interview = Interview.find_by(name: '양준철')
+        - if Interview.find_by(name: '장영화').present?
+          - interview = Interview.find_by(name: '장영화')
           .col-sm-6
             .interview-header
               = link_to interview_path(interview) do
