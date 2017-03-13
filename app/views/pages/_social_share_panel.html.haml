@@ -5,6 +5,8 @@
   - share_text_twitter = "당신은혁신의편입니까 #{interviewee}님의 인터뷰를 들어보세요"
 - if from == 'interviews_list'
   - share_text_twitter = "#당신은혁신의편입니까 사회 혁신의 맨 앞이기에 누구보다 먼저 겪는 어려움, 어떻게 해결할 수 있을까요? 혁신가들의 이야기를 들어보세요."
+- if from == 'insight'
+  - share_text_twitter = "#당신은혁신의편입니까 '#{insight_title}'"
 - if from == 'insights_list'
   - share_text_twitter = "#당신은혁신의편입니까 앞장 서서 혁신의 편에 있는 사람들의 이야기에서 발견한 인사이트를 공유합니다."
 - if from == 'about'
