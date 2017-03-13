@@ -3,6 +3,21 @@
     = f.label :title
     = f.text_field :title, class: 'form-control'
   .form-group
+    = f.label :image
+    = f.hidden_field :image_cache, value: f.object.image_cache
+    = f.file_field :image, class: 'form-control'
+    - if upload_file_exists?(f.object.image)
+      = image_tag f.object.image.xs.url
+  .form-group
+    = f.label :image_thumbnail
+    = f.hidden_field :image_cache, value: f.object.image_cache
+    = f.file_field :image_thumbnail, class: 'form-control'
+    - if upload_file_exists?(f.object.image_thumbnail)
+      = image_tag f.object.image_thumbnail.xs.url
+  .form-group
+    = f.label :summary
+    ~ f.text_area :summary, class: 'form-control'
+  .form-group
     = f.label :body
     ~ f.text_area :body, class: 'form-control redactor'
 

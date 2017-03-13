@@ -1,6 +1,7 @@
 class InsightsController < ApplicationController
   def index
     reset_meta_tags_for_index
+    @insights = Insight.all
   end
 
   def show

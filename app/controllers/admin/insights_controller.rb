@@ -46,7 +46,7 @@ module Admin
     private
 
     def insight_params
-      params.require(:insight).permit(:title, :body)
+      params.require(:insight).permit(:title, :body, :image, :image_thumbnail, :summary)
     end
   end
 end

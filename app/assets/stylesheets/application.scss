@@ -745,12 +745,14 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       line-height: 30px;
     }
   }
+  .insight-header-container,
   .interview-header-container {
     margin-top: 78px;
     @media (max-width: 767px){
       margin-top: 10px;
     }
   }
+  .insight-header,
   .interview-header {
     padding-top: 30px;
     @media (max-width: 767px){
@@ -766,6 +768,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   }
 }
 #bloc-17 {
+  .insight-list-container,
   .interview-list-container {
     padding-left: 15px;
     padding-right: 15px;
@@ -787,6 +790,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
   img {
     width: 100%;
   }
+  .insight-item,
   .interview-item {
     @media (max-width: 767px){
       margin-bottom: 40px;
@@ -803,6 +807,26 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
       }
     }
   }
+  .insight-title p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0;
+    font-weight: bold;
+    @media (max-width: 767px){
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+  .insight-summary p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 22px;
+    font-weight: normal;
+    @media (max-width: 767px){
+      font-size: 14px;
+    }
+  }
+  .insight-proposals,
   .interview-proposals {
     color: #FF7000;
     font-size: 18px;
