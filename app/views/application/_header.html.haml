@@ -16,7 +16,7 @@
         %li
           = link_to '인사이트', insights_path, class: ('active' if params[:controller] == 'insights')
         %li
-          = link_to '설문', survey_path, class: ('active' if current_page?(controller: '/pages', action: :survey))
+          = link_to '정책 설문', survey_path, class: ('active' if current_page?(controller: '/pages', action: :survey))
         %li
           = link_to '컨퍼런스 참가신청', conference_path, class: ('active' if current_page?(controller: '/pages', action: :conference))
         %li

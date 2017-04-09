@@ -4,7 +4,6 @@
     = render 'application/header'
     .container
       .insight-item-container
-        = image_tag 'https://unsplash.it/900/400', class: 'insight-image'
         .row
           .col-sm-12
             .insight-item
@@ -29,8 +28,9 @@
                   %br
                   설문조사 담당자 : 김병권(010-9686-9640 / bkkim21kr@naver.om)
 
-                %p.d-bloc.text-center
-                  = link_to '설문 시작하기', 'https://docs.google.com/a/parti.xyz/forms/d/e/1FAIpQLSc8E61sBbBxyyutClD5WJL30L2aMl53IFzDzAD7spEq8uKplg/viewform?c=0&w=1 ', class: 'btn btn-lg btn-sq btn-wire btn-hover', target: '_blank'
+                %p
+                  %iframe{:frameborder => "0", :height => "900", :marginheight => "0", :marginwidth => "0", :src => "https://docs.google.com/a/parti.xyz/forms/d/e/1FAIpQLSc8E61sBbBxyyutClD5WJL30L2aMl53IFzDzAD7spEq8uKplg/viewform?embedded=true", :width => "760"} 로드 중...
+
 
     .container.fill-bloc-bottom-edge
       = render 'pages/social_share_panel', from: 'survey'
