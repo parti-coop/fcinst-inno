@@ -226,9 +226,13 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 .d-bloc .navbar-toggle .icon-bar{
   background:rgba(255,255,255,1);
 }
-.d-bloc .btn-wire,.d-bloc .btn-wire:hover{
+.d-bloc .btn-wire:hover{
   color:rgba(255,255,255,1);
   border-color:rgba(255,255,255,1);
+}
+.d-bloc .btn-wire{
+  color:rgba(255,255,255,0.8);
+  border-color:rgba(255,255,255,0.8);
 }
 .d-bloc .panel{
   color:rgba(0,0,0,.5);
