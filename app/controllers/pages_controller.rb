@@ -14,4 +14,12 @@ class PagesController < ApplicationController
       url: request.original_url}
     )
   end
+
+  def survey
+    prepare_meta_tags({
+      title: "정책 설문 | 당신은 혁신의 편입니까?",
+      description: "'혁신을 키우는 10가지 정책들'에 설문해주세요.",
+      url: request.original_url}
+    )
+  end
 end

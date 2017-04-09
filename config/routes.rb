@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about', as: :about
   get 'conference', to: 'pages#conference', as: :conference
+  get 'survey', to: 'pages#survey', as: :survey
 
   post 'proposals/:id/upvote', to: 'proposals#upvote', as: :upvote_proposal
 
