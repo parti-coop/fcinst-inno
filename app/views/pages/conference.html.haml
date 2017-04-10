@@ -3,25 +3,16 @@
   #bloc-6.bloc.bgc-blue-pigment.d-bloc.bg-gradation-background
     = render 'application/header'
     .container
-      .insight-item-container
-        = image_tag 'https://unsplash.it/900/400', class: 'insight-image'
+      .insight-item-container.conference
         .row
           .col-sm-12
             .insight-item
               %h1.mg-md.insight-title
                 컨퍼런스 참가신청
               .insight-body.conference
-                %p
-                  이상의 밥을 끝까지 가치를 얼마나 사는가 가치를 봄바람이다. 끓는 생생하며, 열매를 것이다. 붙잡아 그와 끓는 피가 이상을 넣는 구할 교향악이다. 청춘의 품고 전인 유소년에게서 가는 피다. 기관과 길을 그들에게 않는 부패뿐이다. 보내는 거친 고동을 인생에 공자는 사는가 두손을 광야에서 쓸쓸하랴? 피고 피가 인간이 봄바람이다. 청춘을 붙잡아 찾아다녀도, 낙원을 대고, 과실이 보라. 돋고, 대한 풍부하게 힘있다. 같이, 그것은 커다란 안고, 영락과 것이다.
+                = image_tag 'conference.jpg', style: 'width: 100%'
 
-                %p
-                  우리는 없는 아니한 찾아다녀도, 굳세게 그들에게 낙원을 황금시대다. 군영과 이상의 있는 우는 튼튼하며, 있는 만물은 원대하고, 것이다. 사랑의 불러 새 청춘의 열매를 눈이 되는 이상은 봄바람이다. 못할 수 위하여 것이다. 이 인간은 맺어, 위하여, 힘차게 생명을 안고, 것이다. 실현에 우는 가진 실로 이상을 피다. 아니한 넣는 바이며, 있다. 타오르고 있는 바이며, 발휘하기 생생하며, 영원히 것이다. 피는 청춘이 실로 이것이다. 하는 그들에게 지혜는 인생을 그들의 청춘의 새가 봄바람이다. 것은 수 풀밭에 같이, 용기가 때까지 생생하며, 너의 듣는다.
-
-                %p
-                  열락의 그들은 있는 구하지 따뜻한 청춘이 그들의 꽃 있다. 소담스러운 광야에서 아름답고 튼튼하며, 따뜻한 곳이 얼마나 갑 봄바람이다. 그들의 끓는 미묘한 이 철환하였는가 힘있다. 풍부하게 할지니, 그림자는 있으랴? 만물은 구할 맺어, 작고 끝에 많이 않는 그리하였는가? 광야에서 이상이 바이며, 타오르고 것이다. 끓는 열락의 인류의 위하여 같으며, 무엇이 주는 그리하였는가? 끝까지 천지는 간에 이것이다. 가슴에 따뜻한 바이며, 실로 이상이 뭇 있는가? 두손을 그들은 이것이야말로 열락의 살았으며, 것이다. 인간에 가치를 남는 그리하였는가?
-
-                %p.d-bloc.text-center
+                %p.d-bloc.text-center{ style: 'margin-top: 24px;' }
                   = link_to '참가신청하기', 'http://bit.ly/혁신의편', class: 'btn btn-lg btn-sq btn-wire btn-hover', target: '_blank'
-
     .container.fill-bloc-bottom-edge
       = render 'pages/social_share_panel', from: 'conference'

@@ -522,7 +522,8 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
         margin-bottom: 0;
       }
     }
-    &.survey {
+    &.survey,
+    &.conference {
       padding-top: 50px;
       padding-bottom: 50px;
       background-color: #070020;
