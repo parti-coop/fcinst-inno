@@ -522,6 +522,11 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
         margin-bottom: 0;
       }
     }
+    &.survey {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: #070020;
+    }
   }
   .insight-item {
     @media (max-width: 767px){
@@ -550,9 +555,6 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
         font-weight: normal;
       }
       &.conference {
-        color: #070020;
-      }
-      &.survey {
         color: #070020;
       }
     }
