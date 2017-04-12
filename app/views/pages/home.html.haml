@@ -72,15 +72,33 @@
         .col-sm-6
           = link_to insights_path do
             .insight-item
-              %p
-                우리 사회가 건강해지기 위해 꼭 필요한 일들을 업으로 삼아 해내는 분들을 인터뷰에 초대해 이야기를 나누었습니다.
-                %br
-                %br
-                앞장 서서 혁신의 편에 서다보면 고단해지는 순간들도 많지만, 바로 그런 순간들이 혁신의 편에 서기 위해 필요한 것들에 대해 더 정확하고 세밀하게 이야기할 수 있게 합니다.
-                %br
-                %br
-                한숨과 웃음으로 치뤄 낸 무수한 전투의 경험이 오갔던 인터뷰, 그 안에서 발견한 귀중한 인사이트를 혁신의 편에 서려는 더 많은 이들과 나눠보려 합니다.
-                %br
+              .row
+                .col-xs-12.col-sm-4.col
+                  / 1 = 대전
+                  .item{ style: "background-image: url(#{asset_url('main_insight_1.jpg')})" }
+                    .item-label
+                      대전
+                      %br.hidden-xs
+                      워크숍
+                  .item-caption
+                    혁신의 시작은 민간과 행정,
+                    중앙과 지방의 위계적 구조
+                    깨기부터
+                .col-xs-12.col-sm-4.col
+                  / 2 = 광주
+                  .item{ style: "background-image: url(#{asset_url('main_insight_2.jpg')})" }
+                    .item-label
+                      광주
+                      %br.hidden-xs
+                      워크숍
+                .col-xs-12.col-sm-4.col
+                  / 2 = 대구
+                  .item{ style: "background-image: url(#{asset_url('main_insight_2.jpg')})" }
+                    .item-label
+                      대구
+                      %br.hidden-xs
+                      워크숍
+
         .mobile-button-wrapper.visible-xs
           = link_to '인사이트 보고 의견 남기기', insights_path, class: 'btn btn-lg btn-wire btn-sq'
 
