@@ -15,6 +15,10 @@ class PagesController < ApplicationController
     )
   end
 
+  def download_report
+    send_file(Rails.root.join('public/report.pdf'), filename: '2017_프로젝트보고서_혁신생태계활성화를위한정책제안.pdf', disposition: 'attachment')
+  end
+
   def survey
     prepare_meta_tags({
       title: "정책 설문 | 당신은 혁신의 편입니까?",
